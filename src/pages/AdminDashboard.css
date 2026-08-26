@@ -1,0 +1,649 @@
+.admin-dashboard {
+  min-height: 100vh;
+  background: #f4f7f9;
+  color: #1a1c1e;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+/* HEADER */
+
+.admin-header {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+
+  background: #1a365d;
+  color: #ffffff;
+}
+
+.admin-header span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #ffb783;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.06em;
+}
+
+.admin-header h1 {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 24px;
+  line-height: 30px;
+
+  font-weight: 700;
+}
+
+.logout-button {
+  min-height: 42px;
+
+  padding: 0 18px;
+
+  color: #ffffff;
+
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-family: "Hanken Grotesk", sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.logout-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* CONTENT */
+
+.admin-content {
+  width: min(
+    1200px,
+    calc(100% - 48px)
+  );
+
+  margin: 0 auto;
+
+  padding: 40px 0 70px;
+}
+
+
+/* STATS */
+
+.admin-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 28px;
+}
+
+.admin-stat-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #c4c6cf;
+
+  border-radius: 8px;
+}
+
+.admin-stat-card > .material-symbols-outlined {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #1a365d;
+
+  background: #d6e3ff;
+
+  border-radius: 5px;
+
+  font-size: 24px;
+}
+
+.admin-stat-card div {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.admin-stat-card small {
+  color: #43474e;
+
+  font-size: 12px;
+
+  line-height: 18px;
+}
+
+.admin-stat-card strong {
+  margin-top: 2px;
+
+  color: #1a365d;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 25px;
+
+  line-height: 30px;
+}
+
+
+/* PANEL */
+
+.enquiries-panel {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #c4c6cf;
+
+  border-radius: 8px;
+}
+
+.panel-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 25px 26px;
+
+  border-bottom: 1px solid #c4c6cf;
+}
+
+.panel-header > div > span {
+  color: #e67e22;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+}
+
+.panel-header h2 {
+  margin: 3px 0 0;
+
+  color: #1a365d;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 21px;
+  line-height: 28px;
+}
+
+.refresh-button {
+  min-height: 40px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 0 13px;
+
+  color: #1a365d;
+
+  background: #ffffff;
+
+  border: 1px solid #c4c6cf;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-family: "Hanken Grotesk", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.refresh-button:hover {
+  border-color: #1a365d;
+}
+
+.refresh-button .material-symbols-outlined {
+  font-size: 18px;
+}
+
+
+/* EMPTY */
+
+.empty-state {
+  min-height: 220px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  color: #74777f;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+
+/* ENQUIRY LIST */
+
+.enquiry-list {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.enquiry-card {
+  padding: 25px 26px;
+
+  border-bottom: 1px solid #e3e2e6;
+}
+
+.enquiry-card:last-child {
+  border-bottom: 0;
+}
+
+.enquiry-main {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* PERSON */
+
+.enquiry-person {
+  min-width: 220px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.person-avatar {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  background: #1a365d;
+
+  border-radius: 50%;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+.enquiry-person h3 {
+  margin: 0;
+
+  color: #1a365d;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 20px;
+}
+
+.enquiry-person span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #74777f;
+
+  font-size: 12px;
+
+  line-height: 18px;
+}
+
+
+/* META */
+
+.enquiry-meta {
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(100px, 1fr));
+
+  gap: 15px;
+}
+
+.enquiry-meta > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.enquiry-meta small {
+  color: #74777f;
+
+  font-size: 11px;
+
+  line-height: 16px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.03em;
+}
+
+.enquiry-meta strong {
+  color: #1a1c1e;
+
+  font-size: 13px;
+
+  line-height: 19px;
+
+  font-weight: 600;
+}
+
+
+/* STATUS */
+
+.status-badge {
+  width: fit-content;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 4px 9px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.status-new {
+  color: #663100;
+
+  background: #ffdcc5;
+}
+
+.status-contacted {
+  color: #24563f;
+
+  background: #d9eee3;
+}
+
+
+/* MESSAGE */
+
+.enquiry-message {
+  margin: 22px 0 0;
+
+  padding: 15px;
+
+  background: #f4f7f9;
+
+  border-left: 3px solid #e67e22;
+
+  border-radius: 3px;
+}
+
+.enquiry-message small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #74777f;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.04em;
+}
+
+.enquiry-message p {
+  margin: 0;
+
+  color: #43474e;
+
+  font-size: 14px;
+
+  line-height: 22px;
+}
+
+
+/* ACTIONS */
+
+.enquiry-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 18px;
+}
+
+.enquiry-actions a,
+.enquiry-actions button {
+  min-height: 36px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 11px;
+
+  color: #1a365d;
+
+  background: #ffffff;
+
+  border: 1px solid #c4c6cf;
+
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  font-family: "Hanken Grotesk", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.enquiry-actions a:hover,
+.enquiry-actions button:hover {
+  border-color: #1a365d;
+
+  background: #f4f7f9;
+}
+
+.enquiry-actions .material-symbols-outlined {
+  font-size: 17px;
+}
+
+.enquiry-actions .delete-button {
+  color: #ba1a1a;
+
+  border-color: #e6aaa4;
+}
+
+.enquiry-actions .delete-button:hover {
+  background: #ffdad6;
+
+  border-color: #ba1a1a;
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+  .admin-header {
+    padding: 0 24px;
+  }
+
+  .admin-content {
+    width: calc(100% - 32px);
+  }
+
+  .enquiry-main {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .enquiry-person {
+    min-width: 0;
+  }
+
+  .enquiry-meta {
+    width: 100%;
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .admin-header {
+    min-height: 75px;
+
+    padding: 0 16px;
+  }
+
+  .admin-header h1 {
+    font-size: 19px;
+  }
+
+  .admin-header span {
+    font-size: 9px;
+  }
+
+  .logout-button {
+    min-height: 38px;
+
+    padding: 0 12px;
+
+    font-size: 12px;
+  }
+
+  .admin-content {
+    width: calc(100% - 24px);
+
+    padding: 25px 0 50px;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .admin-stat-card {
+    padding: 16px;
+  }
+
+  .panel-header {
+    padding: 18px;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .panel-header h2 {
+    font-size: 18px;
+  }
+
+  .refresh-button {
+    padding: 0 9px;
+
+    font-size: 11px;
+  }
+
+  .enquiry-card {
+    padding: 20px 16px;
+  }
+
+  .enquiry-meta {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 15px;
+  }
+
+  .enquiry-actions {
+    justify-content: flex-start;
+  }
+
+  .enquiry-actions a,
+  .enquiry-actions button {
+    flex: 1;
+  }
+}

@@ -1,0 +1,947 @@
+.labour-page {
+  --surface: #faf9fd;
+  --surface-gray: #f4f7f9;
+  --surface-low: #f4f3f7;
+  --navy: #1a365d;
+  --navy-dark: #002045;
+  --orange: #e67e22;
+  --orange-dark: #c96b15;
+  --text: #1a1c1e;
+  --muted: #43474e;
+  --border: #c4c6cf;
+
+  color: var(--text);
+  background: var(--surface);
+
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.labour-page .container {
+  width: min(
+    1200px,
+    calc(100% - 48px)
+  );
+
+  margin: 0 auto;
+}
+
+.labour-page .eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--orange);
+
+  font-size: 13px;
+  line-height: 18px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+}
+
+.orange-line {
+  width: 64px;
+  height: 4px;
+
+  margin-top: 16px;
+
+  background: var(--orange);
+
+  border-radius: 4px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.labour-hero {
+  position: relative;
+
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: var(--navy);
+}
+
+.labour-hero-bg {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    url("/images/hero-manpower.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.labour-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 32, 69, 0.95),
+      rgba(26, 54, 93, 0.78),
+      rgba(26, 54, 93, 0.48)
+    );
+}
+
+.labour-hero-inner {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 90px 0;
+}
+
+.labour-hero-eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #ffb783;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.06em;
+}
+
+.labour-hero h1 {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 48px;
+
+  line-height: 56px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.02em;
+}
+
+.labour-hero h1 span {
+  display: block;
+}
+
+.labour-hero p {
+  max-width: 690px;
+
+  margin: 24px 0 0;
+
+  color: #ffffff;
+
+  font-size: 18px;
+
+  line-height: 28px;
+}
+
+.labour-hero-button {
+  width: fit-content;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 32px;
+
+  padding: 15px 20px;
+
+  color: #ffffff;
+
+  background: var(--orange);
+
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+.labour-hero-button:hover {
+  background: var(--orange-dark);
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.labour-intro {
+  padding: 70px 0;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.labour-intro-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    0.8fr;
+
+  gap: 70px;
+
+  align-items: end;
+}
+
+.labour-intro h2 {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--navy);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 32px;
+
+  line-height: 40px;
+}
+
+.labour-intro-grid > p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 17px;
+
+  line-height: 28px;
+}
+
+
+/* =========================================
+   CATEGORY OVERVIEW
+========================================= */
+
+.category-overview {
+  padding: 35px 0;
+
+  background: var(--surface-gray);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.overview-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 12px;
+}
+
+.overview-grid a {
+  position: relative;
+
+  min-height: 130px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  color: var(--navy);
+
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease;
+}
+
+.overview-grid a:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--orange);
+}
+
+.overview-number {
+  position: absolute;
+
+  top: 15px;
+  right: 17px;
+
+  color: var(--orange);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.overview-grid .material-symbols-outlined {
+  color: var(--navy);
+
+  font-size: 27px;
+}
+
+.overview-grid strong {
+  margin-top: 10px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 16px;
+
+  line-height: 22px;
+}
+
+.overview-grid small {
+  margin-top: 2px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+.categories-section {
+  padding: 90px 0;
+
+  background: #ffffff;
+}
+
+.labour-category {
+  scroll-margin-top: 100px;
+}
+
+.labour-category + .labour-category {
+  margin-top: 85px;
+
+  padding-top: 85px;
+
+  border-top: 1px solid var(--border);
+}
+
+.category-heading {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    0.65fr;
+
+  gap: 60px;
+
+  align-items: center;
+
+  margin-bottom: 34px;
+}
+
+.category-heading-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+}
+
+.category-number {
+  color: var(--orange);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.category-heading-icon {
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  background: var(--navy);
+
+  border-radius: 8px;
+}
+
+.category-heading-icon .material-symbols-outlined {
+  font-size: 30px;
+}
+
+.category-label {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--orange);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+}
+
+.category-heading h2 {
+  margin: 0;
+
+  color: var(--navy);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 27px;
+
+  line-height: 34px;
+}
+
+.category-heading > p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 24px;
+}
+
+
+/* =========================================
+   WORKER CARDS
+========================================= */
+
+.worker-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.worker-card {
+  min-height: 235px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 22px;
+
+  background: var(--surface-gray);
+
+  border: 1px solid var(--border);
+
+  border-radius: 6px;
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.worker-card:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--orange);
+
+  box-shadow:
+    0 6px 16px
+    rgba(26, 54, 93, 0.08);
+}
+
+.worker-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.worker-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: var(--navy);
+
+  background: #d6e3ff;
+
+  border-radius: 5px;
+}
+
+.worker-icon .material-symbols-outlined {
+  font-size: 23px;
+}
+
+.worker-arrow {
+  color: var(--orange);
+
+  font-size: 19px;
+}
+
+.worker-card h3 {
+  margin: 18px 0 6px;
+
+  color: var(--navy);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 16px;
+
+  line-height: 22px;
+}
+
+.worker-card p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 20px;
+}
+
+.worker-card a {
+  margin-top: auto;
+
+  padding-top: 18px;
+
+  color: var(--orange);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.worker-card a:hover {
+  color: var(--orange-dark);
+}
+
+
+/* =========================================
+   REQUIREMENT
+========================================= */
+
+.requirement-section {
+  padding: 75px 0;
+
+  background: var(--surface-gray);
+}
+
+.requirement-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    0.55fr;
+
+  gap: 70px;
+
+  align-items: center;
+
+  padding: 42px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+}
+
+.requirement-grid h2 {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--navy);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 30px;
+
+  line-height: 38px;
+}
+
+.requirement-grid p {
+  max-width: 600px;
+
+  margin: 18px 0 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 24px;
+}
+
+.requirement-actions {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: stretch;
+
+  gap: 12px;
+}
+
+.requirement-button {
+  min-height: 54px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  background: var(--orange);
+
+  border: 1px solid var(--orange);
+
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.requirement-button:hover {
+  background: var(--orange-dark);
+}
+
+.requirement-contact {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 45px;
+
+  color: var(--navy);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.labour-final-cta {
+  padding: 55px 0;
+
+  background: var(--navy-dark);
+}
+
+.labour-final-inner {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+.labour-final-inner > div > span {
+  color: #ffb783;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.06em;
+}
+
+.labour-final-inner h2 {
+  max-width: 700px;
+
+  margin: 7px 0 0;
+
+  color: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 30px;
+
+  line-height: 38px;
+}
+
+.final-cta-button {
+  min-height: 54px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 23px;
+
+  color: #ffffff;
+
+  background: var(--orange);
+
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  flex-shrink: 0;
+}
+
+.final-cta-button:hover {
+  background: var(--orange-dark);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .worker-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .overview-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .category-heading {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .requirement-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .labour-page .container {
+    width: calc(100% - 32px);
+  }
+
+  .labour-hero {
+    min-height: 500px;
+  }
+
+  .labour-hero-inner {
+    padding: 70px 0;
+  }
+
+  .labour-hero h1 {
+    font-size: 31px;
+
+    line-height: 39px;
+  }
+
+  .labour-hero p {
+    font-size: 16px;
+
+    line-height: 25px;
+  }
+
+  .labour-intro {
+    padding: 60px 0;
+  }
+
+  .labour-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .labour-intro h2 {
+    font-size: 28px;
+
+    line-height: 35px;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+  }
+
+  .overview-grid a {
+    min-height: 120px;
+
+    padding: 15px;
+  }
+
+  .overview-grid strong {
+    font-size: 14px;
+  }
+
+  .categories-section {
+    padding: 65px 0;
+  }
+
+  .labour-category + .labour-category {
+    margin-top: 60px;
+
+    padding-top: 60px;
+  }
+
+  .category-heading-left {
+    align-items: flex-start;
+
+    gap: 11px;
+  }
+
+  .category-heading-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .category-heading-icon .material-symbols-outlined {
+    font-size: 25px;
+  }
+
+  .category-heading h2 {
+    font-size: 22px;
+
+    line-height: 29px;
+  }
+
+  .worker-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+  .worker-card {
+    min-height: 220px;
+
+    padding: 17px;
+  }
+
+  .worker-card h3 {
+    font-size: 14px;
+
+    line-height: 20px;
+  }
+
+  .worker-card p {
+    font-size: 12px;
+
+    line-height: 18px;
+  }
+
+  .worker-card a {
+    font-size: 12px;
+  }
+
+  .requirement-section {
+    padding: 60px 0;
+  }
+
+  .requirement-grid {
+    padding: 24px;
+
+    gap: 30px;
+  }
+
+  .requirement-grid h2 {
+    font-size: 26px;
+
+    line-height: 34px;
+  }
+
+  .labour-final-inner {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .final-cta-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .worker-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
