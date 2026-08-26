@@ -82,14 +82,49 @@ const industries = [
   },
 ];
 
+const clients = [
+  {
+    number: "01",
+    name: "M/s Robotek LLP Pvt. Ltd.",
+    location: "Industrial Area, Kundli, Distt. Sonepat, Haryana",
+  },
+  {
+    number: "02",
+    name: "M/s MetaPlast Engineering LLP Pvt. Ltd.",
+    location: "Industrial Area, Kundli, Sonepat, Haryana",
+  },
+  {
+    number: "03",
+    name: "M/s Hitech Global Pvt. Ltd.",
+    location: "Industrial Area, Kundli, Sonepat, Haryana",
+  },
+  {
+    number: "04",
+    name: "M/s Kenstel Communications Pvt. Ltd.",
+    location: "Industrial Area, Kundli, Sonepat, Haryana",
+  },
+  {
+    number: "05",
+    name: "M/s Alpine Tech Industries Pvt. Ltd.",
+    location: "Industrial Area, Kundli, Sonepat, Haryana",
+  },
+  {
+    number: "06",
+    name: "M/s Arihant Technopack Pvt. Ltd.",
+    location: "Industrial Area, Rai, Sonepat, Haryana",
+  },
+];
+
 function IndustriesServed() {
   return (
     <main className="industries-page">
 
-      {/* HERO */}
+      {/* =====================================================
+          HERO
+      ===================================================== */}
+
       <section className="industries-hero">
         <div className="industries-container">
-
           <div className="industries-hero-content">
 
             <div className="industries-eyebrow">
@@ -107,9 +142,10 @@ function IndustriesServed() {
             </h1>
 
             <p>
-              ShreeJi Enterprises provides dependable skilled and
-              unskilled manpower for businesses, projects and
-              operational requirements across different industries.
+              ShreeJi Enterprises provides dependable skilled,
+              unskilled, helper and supervisor manpower for
+              businesses, projects and operational requirements
+              across different industries.
             </p>
 
             <div className="industries-hero-actions">
@@ -118,6 +154,7 @@ function IndustriesServed() {
                 className="industry-btn industry-btn-orange"
               >
                 Get Manpower
+
                 <span className="material-symbols-outlined">
                   arrow_forward
                 </span>
@@ -136,12 +173,14 @@ function IndustriesServed() {
             </div>
 
           </div>
-
         </div>
       </section>
 
 
-      {/* INTRO */}
+      {/* =====================================================
+          INTRO
+      ===================================================== */}
+
       <section className="industries-intro">
         <div className="industries-container">
 
@@ -154,23 +193,23 @@ function IndustriesServed() {
 
               <h2>
                 Manpower Built Around
-                Your Industry's Needs
+                Your Industry&apos;s Needs
               </h2>
             </div>
 
             <div>
               <p>
-                Every industry has different workforce requirements.
-                From machine operators and technicians to helpers,
-                loaders and general labour, ShreeJi Enterprises
-                connects businesses with manpower suited to their
-                operational needs.
+                We are pleased to provide manpower solutions
+                according to the requirements of our valuable
+                clients across different business and industrial
+                environments.
               </p>
 
               <p>
-                Our workforce solutions are designed to help companies
-                maintain productivity, meet project requirements and
-                scale manpower when demand increases.
+                Our workforce includes skilled and unskilled
+                workers, helpers, supervisors and other manpower
+                categories required for day-to-day operations,
+                production and project requirements.
               </p>
             </div>
 
@@ -180,7 +219,10 @@ function IndustriesServed() {
       </section>
 
 
-      {/* INDUSTRIES */}
+      {/* =====================================================
+          INDUSTRIES
+      ===================================================== */}
+
       <section className="industries-list">
         <div className="industries-container">
 
@@ -194,8 +236,9 @@ function IndustriesServed() {
             </h2>
 
             <p>
-              Our manpower solutions can support different business
-              environments and operational requirements.
+              Our manpower solutions can support different
+              business environments and operational
+              requirements.
             </p>
           </div>
 
@@ -269,11 +312,77 @@ function IndustriesServed() {
 
           </div>
 
+
+          {/* =================================================
+              CLIENTS WE HAVE SERVED
+          ================================================= */}
+
+          <section className="clients-section">
+
+            <div className="clients-section-heading">
+
+              <span className="section-label">
+                OUR CLIENTS
+              </span>
+
+              <h2>
+                Organisations We Have Served
+              </h2>
+
+              <p>
+                We provide skilled, unskilled, helper and
+                supervisor manpower according to the workforce
+                requirements of our valuable clients.
+              </p>
+
+            </div>
+
+
+            <div className="clients-grid">
+
+              {clients.map((client) => (
+                <article
+                  className="client-card"
+                  key={client.number}
+                >
+
+                  <div className="client-number">
+                    {client.number}
+                  </div>
+
+                  <div className="client-icon">
+                    <span className="material-symbols-outlined">
+                      business
+                    </span>
+                  </div>
+
+                  <div className="client-content">
+
+                    <h3>
+                      {client.name}
+                    </h3>
+
+                    <p>
+                      {client.location}
+                    </p>
+
+                  </div>
+
+                </article>
+              ))}
+
+            </div>
+
+          </section>
+
         </div>
       </section>
 
 
-      {/* WORKFORCE TYPES */}
+      {/* =====================================================
+          WORKFORCE
+      ===================================================== */}
+
       <section className="workforce-section">
         <div className="industries-container">
 
@@ -286,14 +395,15 @@ function IndustriesServed() {
               </span>
 
               <h2>
-                Skilled & Unskilled
-                Manpower
+                Skilled, Unskilled,
+                Helpers & Supervisors
               </h2>
 
               <p>
-                Whether you require trained professionals for
-                specialised operations or dependable general labour
-                for day-to-day work, we can support your manpower
+                We deal in different manpower categories as per
+                the requirements of our valuable clients. Our
+                workforce solutions can support industrial,
+                commercial, construction and operational
                 requirements.
               </p>
 
@@ -314,6 +424,7 @@ function IndustriesServed() {
             <div className="workforce-types">
 
               <div className="workforce-type-card">
+
                 <div className="workforce-type-icon">
                   <span className="material-symbols-outlined">
                     engineering
@@ -321,7 +432,9 @@ function IndustriesServed() {
                 </div>
 
                 <div>
-                  <h3>Skilled Manpower</h3>
+                  <h3>
+                    Skilled Manpower
+                  </h3>
 
                   <p>
                     Machine operators, electricians, welders,
@@ -329,10 +442,12 @@ function IndustriesServed() {
                     workers.
                   </p>
                 </div>
+
               </div>
 
 
               <div className="workforce-type-card">
+
                 <div className="workforce-type-icon">
                   <span className="material-symbols-outlined">
                     groups
@@ -340,13 +455,39 @@ function IndustriesServed() {
                 </div>
 
                 <div>
-                  <h3>Unskilled Manpower</h3>
+                  <h3>
+                    Unskilled Manpower
+                  </h3>
 
                   <p>
-                    Helpers, loaders, unloaders, housekeeping
-                    staff, packing workers and general labour.
+                    Helpers, loaders, unloaders, packing
+                    workers and general labour.
                   </p>
                 </div>
+
+              </div>
+
+
+              <div className="workforce-type-card">
+
+                <div className="workforce-type-icon">
+                  <span className="material-symbols-outlined">
+                    supervisor_account
+                  </span>
+                </div>
+
+                <div>
+                  <h3>
+                    Supervisors
+                  </h3>
+
+                  <p>
+                    Supervisory manpower for coordinating
+                    workers and supporting day-to-day
+                    operational requirements.
+                  </p>
+                </div>
+
               </div>
 
             </div>
@@ -357,13 +498,17 @@ function IndustriesServed() {
       </section>
 
 
-      {/* CTA */}
+      {/* =====================================================
+          CTA
+      ===================================================== */}
+
       <section className="industries-cta">
         <div className="industries-container">
 
           <div className="industries-cta-inner">
 
             <div>
+
               <span className="section-label section-label-light">
                 NEED MANPOWER?
               </span>
@@ -375,9 +520,10 @@ function IndustriesServed() {
 
               <p>
                 Share your manpower requirement with ShreeJi
-                Enterprises and our team will help you find the
-                right workforce for your operation.
+                Enterprises and our team can help you with
+                suitable workforce requirements.
               </p>
+
             </div>
 
             <Link
