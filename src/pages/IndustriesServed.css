@@ -3,6 +3,7 @@
   overflow: hidden;
 }
 
+
 /* =========================================================
    HERO
 ========================================================= */
@@ -56,6 +57,11 @@
   margin-inline: auto;
 }
 
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
 .industries-hero-content {
   max-width: 850px;
 
@@ -106,6 +112,8 @@
 
   line-height: 56px;
 
+  font-family: "Montserrat", sans-serif;
+
   font-weight: 800;
 
   letter-spacing: -0.02em;
@@ -116,12 +124,18 @@
 
   margin-bottom: 34px;
 
-  color: rgba(255, 255, 255, 0.88);
+  color:
+    rgba(255, 255, 255, 0.88);
 
   font-size: 18px;
 
   line-height: 29px;
 }
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
 
 .industries-hero-actions {
   display: flex;
@@ -152,7 +166,8 @@
 
   transition:
     transform 150ms ease,
-    background 150ms ease;
+    background 150ms ease,
+    border-color 150ms ease;
 }
 
 .industry-btn:hover {
@@ -182,6 +197,7 @@
   background:
     rgba(255, 255, 255, 0.08);
 }
+
 
 /* =========================================================
    INTRO
@@ -244,8 +260,9 @@
   margin-bottom: 0;
 }
 
+
 /* =========================================================
-   INDUSTRIES
+   INDUSTRIES SECTION
 ========================================================= */
 
 .industries-list {
@@ -279,6 +296,11 @@
 
   line-height: 27px;
 }
+
+
+/* =========================================================
+   INDUSTRY CARDS
+========================================================= */
 
 .industries-grid {
   display: grid;
@@ -385,6 +407,11 @@
   line-height: 24px;
 }
 
+
+/* =========================================================
+   WORKER LIST
+========================================================= */
+
 .industry-workers {
   padding-top: 20px;
 
@@ -432,6 +459,11 @@
   font-size: 17px;
 }
 
+
+/* =========================================================
+   INDUSTRY CARD LINK
+========================================================= */
+
 .industry-card-link {
   display: flex;
 
@@ -452,6 +484,8 @@
   font-size: 14px;
 
   font-weight: 700;
+
+  text-decoration: none;
 }
 
 .industry-card-link:hover {
@@ -462,6 +496,158 @@
 .material-symbols-outlined {
   font-size: 19px;
 }
+
+
+/* =========================================================
+   CLIENTS
+========================================================= */
+
+.clients-section {
+  margin-top: 80px;
+
+  padding-top: 75px;
+
+  border-top: 1px solid var(--border);
+}
+
+.clients-section-heading {
+  max-width: 720px;
+
+  margin-bottom: 38px;
+}
+
+.clients-section-heading h2 {
+  margin-bottom: 12px;
+
+  color: var(--primary);
+
+  font-size: 32px;
+
+  line-height: 40px;
+}
+
+.clients-section-heading p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 17px;
+
+  line-height: 27px;
+}
+
+.clients-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+.client-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    42px 54px 1fr;
+
+  align-items: center;
+
+  gap: 18px;
+
+  min-height: 125px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.client-card:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(26, 54, 93, 0.35);
+
+  box-shadow:
+    0 7px 20px
+    rgba(26, 54, 93, 0.07);
+}
+
+.client-number {
+  align-self: start;
+
+  padding-top: 5px;
+
+  color: #9ca3af;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.client-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: var(--orange);
+
+  background:
+    rgba(230, 126, 34, 0.10);
+
+  border-radius: 6px;
+}
+
+.client-icon
+.material-symbols-outlined {
+  font-size: 26px;
+}
+
+.client-content {
+  min-width: 0;
+}
+
+.client-content h3 {
+  margin: 0 0 7px;
+
+  color: var(--primary);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 17px;
+
+  line-height: 24px;
+
+  font-weight: 700;
+}
+
+.client-content p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 14px;
+
+  line-height: 21px;
+}
+
 
 /* =========================================================
    WORKFORCE
@@ -519,7 +705,8 @@
 .workforce-type-card {
   display: grid;
 
-  grid-template-columns: 64px 1fr;
+  grid-template-columns:
+    64px 1fr;
 
   gap: 18px;
 
@@ -575,8 +762,9 @@
   line-height: 23px;
 }
 
+
 /* =========================================================
-   CTA
+   FINAL CTA
 ========================================================= */
 
 .industries-cta {
@@ -624,11 +812,13 @@
   color: #ffad65;
 }
 
+
 /* =========================================================
    TABLET
 ========================================================= */
 
 @media (max-width: 900px) {
+
   .industries-container {
     width: calc(100% - 40px);
   }
@@ -665,6 +855,10 @@
     min-height: auto;
   }
 
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
   .industries-cta-inner {
     align-items: flex-start;
 
@@ -674,11 +868,13 @@
   }
 }
 
+
 /* =========================================================
    MOBILE
 ========================================================= */
 
 @media (max-width: 650px) {
+
   .industries-container {
     width: calc(100% - 32px);
   }
@@ -727,6 +923,9 @@
     min-height: 50px;
   }
 
+
+  /* INTRO */
+
   .industries-intro,
   .industries-list,
   .workforce-section {
@@ -739,6 +938,7 @@
 
   .industries-intro h2,
   .industries-section-heading h2,
+  .clients-section-heading h2,
   .workforce-content h2 {
     font-size: 27px !important;
 
@@ -747,11 +947,15 @@
 
   .industries-intro-grid p,
   .industries-section-heading p,
+  .clients-section-heading p,
   .workforce-content p {
     font-size: 15px;
 
     line-height: 24px;
   }
+
+
+  /* INDUSTRIES */
 
   .industries-section-heading {
     margin-bottom: 28px;
@@ -781,12 +985,68 @@
     margin-bottom: 20px;
   }
 
+
+  /* CLIENTS */
+
+  .clients-section {
+    margin-top: 60px;
+
+    padding-top: 60px;
+  }
+
+  .clients-section-heading {
+    margin-bottom: 28px;
+  }
+
+  .clients-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .client-card {
+    grid-template-columns:
+      32px 48px 1fr;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    min-height: 105px;
+  }
+
+  .client-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .client-icon
+  .material-symbols-outlined {
+    font-size: 23px;
+  }
+
+  .client-content h3 {
+    font-size: 15px;
+
+    line-height: 21px;
+  }
+
+  .client-content p {
+    font-size: 13px;
+
+    line-height: 19px;
+  }
+
+
+  /* WORKFORCE */
+
   .workforce-grid {
     gap: 35px;
   }
 
   .workforce-type-card {
-    grid-template-columns: 50px 1fr;
+    grid-template-columns:
+      50px 1fr;
 
     gap: 14px;
 
@@ -815,6 +1075,9 @@
     line-height: 22px;
   }
 
+
+  /* CTA */
+
   .industries-cta {
     padding: 58px 0;
   }
@@ -836,11 +1099,13 @@
   }
 }
 
+
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 380px) {
+
   .industries-container {
     width: calc(100% - 24px);
   }
@@ -870,5 +1135,22 @@
 
   .industry-workers li {
     font-size: 13px;
+  }
+
+  .client-card {
+    grid-template-columns:
+      28px 44px 1fr;
+
+    gap: 9px;
+
+    padding: 15px;
+  }
+
+  .client-content h3 {
+    font-size: 14px;
+  }
+
+  .client-content p {
+    font-size: 12px;
   }
 }
