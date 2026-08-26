@@ -6,11 +6,17 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import OurServices from "./pages/OurServices";
+import IndustriesServed from "./pages/IndustriesServed";
 import LabourCategories from "./pages/LabourCategories";
 import Contact from "./pages/Contact";
 
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
+
+
+/* =========================================================
+   PUBLIC LAYOUT
+========================================================= */
 
 function PublicLayout({ children }) {
   return (
@@ -26,15 +32,19 @@ function PublicLayout({ children }) {
   );
 }
 
+
+/* =========================================================
+   APP
+========================================================= */
+
 function App() {
   return (
     <BrowserRouter>
-
       <Routes>
 
-        {/* =========================
+        {/* =================================================
             PUBLIC WEBSITE
-        ========================= */}
+        ================================================= */}
 
         <Route
           path="/"
@@ -64,6 +74,15 @@ function App() {
         />
 
         <Route
+          path="/industries-served"
+          element={
+            <PublicLayout>
+              <IndustriesServed />
+            </PublicLayout>
+          }
+        />
+
+        <Route
           path="/labour-categories"
           element={
             <PublicLayout>
@@ -82,10 +101,10 @@ function App() {
         />
 
 
-        {/* =========================
+        {/* =================================================
             ADMIN PORTAL
             No Navbar / Footer
-        ========================= */}
+        ================================================= */}
 
         <Route
           path="/admin/login"
@@ -98,7 +117,6 @@ function App() {
         />
 
       </Routes>
-
     </BrowserRouter>
   );
 }
