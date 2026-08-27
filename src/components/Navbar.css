@@ -211,6 +211,20 @@
 
   cursor: pointer;
 }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
 
 .menu-toggle span {
   width: 20px;

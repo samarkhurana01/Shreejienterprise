@@ -105,9 +105,9 @@ function About() {
   return (
     <main className="about-page">
 
-      {/* =========================================
+      {/* =====================================================
           HERO
-      ========================================= */}
+      ===================================================== */}
 
       <section className="about-hero">
 
@@ -129,8 +129,8 @@ function About() {
             </h1>
 
             <p>
-              Skilled and unskilled manpower solutions
-              for industrial, commercial, construction,
+              Skilled and unskilled manpower solutions for
+              industrial, commercial, construction,
               warehousing and operational requirements.
             </p>
 
@@ -140,15 +140,18 @@ function About() {
 
       </section>
 
-      {/* =========================================
+
+      {/* =====================================================
           WHO WE ARE
-      ========================================= */}
+      ===================================================== */}
 
       <section className="about-introduction">
 
         <div className="container">
 
           <div className="about-intro-grid">
+
+            {/* CONTENT */}
 
             <div className="about-intro-content">
 
@@ -190,18 +193,23 @@ function About() {
 
             </div>
 
+
+            {/* IMAGE 1 */}
+
             <div className="about-intro-image">
 
               <img
-                src="/images/workforce.jpg"
-                alt="ShreeJi Enterprises workforce"
+                src="/images/workforce.png"
+                alt="Industrial workforce at work"
               />
 
               <div className="intro-image-card">
 
-                <span className="material-symbols-outlined">
-                  groups
-                </span>
+                <div className="intro-image-card-icon">
+                  <span className="material-symbols-outlined">
+                    groups
+                  </span>
+                </div>
 
                 <div>
                   <strong>
@@ -223,9 +231,10 @@ function About() {
 
       </section>
 
-      {/* =========================================
+
+      {/* =====================================================
           WHAT WE PROVIDE
-      ========================================= */}
+      ===================================================== */}
 
       <section className="provide-section">
 
@@ -252,6 +261,7 @@ function About() {
 
           </div>
 
+
           <div className="provide-grid">
 
             {/* SKILLED */}
@@ -261,23 +271,17 @@ function About() {
               <div className="provide-header">
 
                 <div className="provide-header-icon">
-
                   <span className="material-symbols-outlined">
                     engineering
                   </span>
-
                 </div>
 
                 <div>
-
-                  <span>
-                    01
-                  </span>
+                  <span>01</span>
 
                   <h3>
                     Skilled Manpower
                   </h3>
-
                 </div>
 
               </div>
@@ -323,6 +327,7 @@ function About() {
 
             </div>
 
+
             {/* GENERAL */}
 
             <div className="provide-column general-column">
@@ -339,9 +344,7 @@ function About() {
 
                 <div>
 
-                  <span>
-                    02
-                  </span>
+                  <span>02</span>
 
                   <h3>
                     General &amp; Unskilled
@@ -399,9 +402,10 @@ function About() {
 
       </section>
 
-      {/* =========================================
+
+      {/* =====================================================
           OUR APPROACH
-      ========================================= */}
+      ===================================================== */}
 
       <section className="approach-section">
 
@@ -425,6 +429,7 @@ function About() {
             </p>
 
           </div>
+
 
           <div className="process-grid">
 
@@ -463,9 +468,10 @@ function About() {
 
       </section>
 
-      {/* =========================================
+
+      {/* =====================================================
           WHY SHREEJI
-      ========================================= */}
+      ===================================================== */}
 
       <section className="why-about-section">
 
@@ -473,11 +479,13 @@ function About() {
 
           <div className="why-about-grid">
 
+            {/* IMAGE 2 */}
+
             <div className="why-about-image">
 
               <img
-                src="/images/industrial-workforce.jpg"
-                alt="Industrial workforce"
+                src="/images/packaging.png"
+                alt="Industrial packaging and manpower operations"
               />
 
               <div className="why-image-overlay">
@@ -486,13 +494,22 @@ function About() {
                   verified
                 </span>
 
-                <strong>
-                  Workforce Solutions
-                </strong>
+                <div>
+                  <strong>
+                    Workforce Solutions
+                  </strong>
+
+                  <span>
+                    Reliable support for business operations
+                  </span>
+                </div>
 
               </div>
 
             </div>
+
+
+            {/* CONTENT */}
 
             <div className="why-about-content">
 
@@ -556,9 +573,10 @@ function About() {
 
       </section>
 
-      {/* =========================================
+
+      {/* =====================================================
           INDUSTRIES
-      ========================================= */}
+      ===================================================== */}
 
       <section className="about-industries-section">
 
@@ -589,6 +607,7 @@ function About() {
 
           </div>
 
+
           <div className="about-industry-list">
 
             {industries.map((industry, index) => (
@@ -618,14 +637,12 @@ function About() {
 
       </section>
 
-      {/* =========================================
-          CTA
-      ========================================= */}
 
-      <section
-        className="about-cta"
-        id="contact"
-      >
+      {/* =====================================================
+          CTA
+      ===================================================== */}
+
+      <section className="about-cta">
 
         <div className="container">
 
@@ -653,7 +670,7 @@ function About() {
             <div className="about-cta-actions">
 
               <a
-                href="#contact"
+                href="/contact"
                 className="button button-orange"
               >
                 Request Manpower

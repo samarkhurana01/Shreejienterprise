@@ -1,170 +1,176 @@
+import { Link } from "react-router-dom";
 import "./Home.css";
 
-const skilledManpower = [
-  {
-    icon: "precision_manufacturing",
-    title: "Machine Operators",
-    description:
-      "Trained operators for industrial and production machinery.",
-  },
-  {
-    icon: "electrical_services",
-    title: "Electricians",
-    description:
-      "Skilled electrical workforce for industrial and commercial requirements.",
-  },
-  {
-    icon: "construction",
-    title: "Welders",
-    description:
-      "Experienced welding workforce for fabrication and industrial work.",
-  },
-  {
-    icon: "engineering",
-    title: "Fitters & Technicians",
-    description:
-      "Technical manpower for machinery, maintenance and site operations.",
-  },
-  {
-    icon: "carpenter",
-    title: "Carpenters",
-    description:
-      "Skilled carpenters for installation, finishing and site work.",
-  },
-  {
-    icon: "plumbing",
-    title: "Plumbers",
-    description:
-      "Experienced plumbing workforce for commercial and industrial projects.",
-  },
-];
-
-const generalManpower = [
-  {
-    icon: "local_shipping",
-    title: "Loading",
-  },
-  {
-    icon: "inventory_2",
-    title: "Unloading",
-  },
-  {
-    icon: "package_2",
-    title: "Packing",
-  },
-  {
-    icon: "sort",
-    title: "Sorting",
-  },
-  {
-    icon: "cleaning_services",
-    title: "Housekeeping",
-  },
-  {
-    icon: "yard",
-    title: "Horticulture",
-  },
-  {
-    icon: "groups",
-    title: "General Helpers",
-  },
-  {
-    icon: "badge",
-    title: "Placement",
-  },
-];
-
-const industries = [
-  {
-    icon: "factory",
-    title: "Manufacturing",
-    description:
-      "Reliable workforce for production, machinery and factory operations.",
-  },
-  {
-    icon: "warehouse",
-    title: "Warehousing & Logistics",
-    description:
-      "Manpower for loading, unloading, packing, sorting and material handling.",
-  },
-  {
-    icon: "construction",
-    title: "Construction",
-    description:
-      "Skilled trades and general workforce for construction projects.",
-  },
-  {
-    icon: "account_balance",
-    title: "Commercial",
-    description:
-      "Workforce solutions for offices, commercial facilities and operations.",
-  },
-  {
-    icon: "apartment",
-    title: "Infrastructure",
-    description:
-      "Flexible manpower deployment for large infrastructure projects.",
-  },
-  {
-    icon: "business_center",
-    title: "Facility Operations",
-    description:
-      "Housekeeping, utility, horticulture and support manpower.",
-  },
-];
-
-const benefits = [
-  {
-    icon: "verified",
-    title: "Reliable Workforce",
-    description:
-      "Manpower solutions focused on reliability and project requirements.",
-  },
-  {
-    icon: "groups",
-    title: "Skilled & Unskilled",
-    description:
-      "From machine operators and technicians to general helpers.",
-  },
-  {
-    icon: "speed",
-    title: "Quick Deployment",
-    description:
-      "Workforce support for changing project and operational demands.",
-  },
-  {
-    icon: "business",
-    title: "All Sectors",
-    description:
-      "Manpower solutions for industrial, commercial and service sectors.",
-  },
-];
-
-const serviceAreas = [
-  "Noida",
-  "Greater Noida",
-  "Delhi NCR",
-  "Gurgaon",
-  "Ghaziabad",
-  "Faridabad",
-];
+import heroImage from "../assets/hero-construction.jpg";
 
 function Home() {
+  const skilledWorkers = [
+    {
+      icon: "engineering",
+      title: "Masons",
+      description:
+        "Experienced masons for residential, commercial and industrial construction projects.",
+    },
+    {
+      icon: "carpenter",
+      title: "Carpenters",
+      description:
+        "Skilled carpenters for structural, finishing and interior construction requirements.",
+    },
+    {
+      icon: "bolt",
+      title: "Electricians",
+      description:
+        "Qualified electricians for industrial, commercial and construction electrical work.",
+    },
+    {
+      icon: "plumbing",
+      title: "Plumbers",
+      description:
+        "Reliable plumbing workforce for construction, maintenance and facility requirements.",
+    },
+    {
+      icon: "handyman",
+      title: "Welders",
+      description:
+        "Skilled welders for fabrication, structural steel and industrial work.",
+    },
+    {
+      icon: "precision_manufacturing",
+      title: "Technicians",
+      description:
+        "Technical manpower for industrial operations, maintenance and specialized requirements.",
+    },
+  ];
+
+  const generalWorkers = [
+    {
+      icon: "construction",
+      title: "Construction Workers",
+    },
+    {
+      icon: "inventory_2",
+      title: "Warehouse Workers",
+    },
+    {
+      icon: "local_shipping",
+      title: "Loading & Unloading",
+    },
+    {
+      icon: "cleaning_services",
+      title: "Housekeeping Staff",
+    },
+    {
+      icon: "agriculture",
+      title: "General Labour",
+    },
+    {
+      icon: "factory",
+      title: "Factory Workers",
+    },
+    {
+      icon: "landscape",
+      title: "Site Workers",
+    },
+    {
+      icon: "groups",
+      title: "Support Staff",
+    },
+  ];
+
+  const industries = [
+    {
+      icon: "construction",
+      title: "Construction",
+      description:
+        "Skilled and unskilled workforce for residential, commercial and large-scale construction projects.",
+    },
+    {
+      icon: "factory",
+      title: "Industrial",
+      description:
+        "Reliable manpower for factories, plants, production units and industrial operations.",
+    },
+    {
+      icon: "warehouse",
+      title: "Warehousing",
+      description:
+        "Workforce for warehouses, logistics, inventory handling, loading and unloading operations.",
+    },
+    {
+      icon: "apartment",
+      title: "Infrastructure",
+      description:
+        "Manpower support for infrastructure development and major civil projects.",
+    },
+    {
+      icon: "business",
+      title: "Commercial",
+      description:
+        "Flexible manpower solutions for commercial establishments and business facilities.",
+    },
+    {
+      icon: "settings",
+      title: "Facility Operations",
+      description:
+        "Support workforce for maintenance, housekeeping and day-to-day facility operations.",
+    },
+  ];
+
+  const benefits = [
+    {
+      icon: "verified",
+      title: "Reliable Workforce",
+      description:
+        "Dependable manpower selected according to project requirements.",
+    },
+    {
+      icon: "groups",
+      title: "Skilled & Unskilled",
+      description:
+        "Wide range of workforce categories for different industries.",
+    },
+    {
+      icon: "schedule",
+      title: "Timely Deployment",
+      description:
+        "Fast manpower deployment to help keep your projects on schedule.",
+    },
+    {
+      icon: "business_center",
+      title: "Industry Experience",
+      description:
+        "Workforce solutions designed around practical site requirements.",
+    },
+  ];
+
+  const areas = [
+    "Noida",
+    "Greater Noida",
+    "Delhi NCR",
+    "Gurgaon",
+    "Ghaziabad",
+    "Faridabad",
+    "Jewar",
+    "Dadri",
+  ];
+
   return (
-    <main className="home">
+    <div className="home">
 
-      {/* =========================================
+      {/* =====================================================
           HERO
-      ========================================= */}
+      ===================================================== */}
 
-      <section className="hero">
-
-        <div className="hero-background" />
-
-        <div className="hero-overlay" />
+      <section
+        className="hero"
+        style={{
+          "--hero-image": `url("${heroImage}")`,
+        }}
+      >
+        <div className="hero-overlay"></div>
 
         <div className="hero-inner">
-
           <div className="hero-content">
 
             <div className="hero-badge">
@@ -172,12 +178,15 @@ function Home() {
                 verified
               </span>
 
-              Trusted Manpower Supply Partner
+              <span>
+                Trusted Manpower Supply Partner
+              </span>
             </div>
 
             <h1>
-              Skilled &amp; Unskilled
-              <span> Manpower for Every Industry</span>
+              Skilled &amp; Unskilled Manpower
+              <br />
+              for Every Industry
             </h1>
 
             <p>
@@ -188,58 +197,46 @@ function Home() {
 
             <div className="hero-buttons">
 
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="button button-orange"
               >
-                Get Manpower
+                <span>Get Manpower</span>
 
                 <span className="material-symbols-outlined">
                   arrow_forward
                 </span>
-              </a>
+              </Link>
 
               <a
-                href="#contact"
+                href="tel:+917379433305"
                 className="button button-outline"
               >
                 <span className="material-symbols-outlined">
-                  phone
+                  call
                 </span>
 
-                Contact Us
+                <span>Contact Us</span>
               </a>
 
             </div>
 
             <div className="hero-services">
-
-              <span>
-                Skilled Workforce
-              </span>
-
-              <span>
-                Unskilled Workforce
-              </span>
-
-              <span>
-                All Sectors
-              </span>
-
+              <span>Skilled Workforce</span>
+              <span>Unskilled Workforce</span>
+              <span>All Sectors</span>
             </div>
 
           </div>
-
         </div>
-
       </section>
 
-      {/* =========================================
-          INTRO / STATS
-      ========================================= */}
+
+      {/* =====================================================
+          INTRO
+      ===================================================== */}
 
       <section className="intro-section">
-
         <div className="container">
 
           <div className="intro-grid">
@@ -251,20 +248,18 @@ function Home() {
               </span>
 
               <h2>
-                Workforce Solutions
-                Built Around Your Requirement
+                Manpower You Can Depend On
               </h2>
 
-              <div className="orange-line" />
+              <div className="orange-line"></div>
 
               <p>
-                ShreeJi Enterprises provides skilled and
-                unskilled manpower for all sectors. From
-                machine operators and technical workers
-                to loading, unloading, packing, sorting,
-                housekeeping and general workforce, we
-                help businesses meet their manpower
-                requirements.
+                ShreeJi Enterprises provides dependable skilled
+                and unskilled manpower for construction,
+                industrial, commercial, warehousing and
+                infrastructure requirements. We help businesses
+                find the right workforce for their operational
+                and project needs.
               </p>
 
             </div>
@@ -273,17 +268,17 @@ function Home() {
 
               <div className="stat-card">
                 <strong>Skilled</strong>
-                <span>Manpower</span>
+                <span>Workforce</span>
               </div>
 
               <div className="stat-card">
                 <strong>Unskilled</strong>
-                <span>Manpower</span>
+                <span>Workforce</span>
               </div>
 
               <div className="stat-card">
-                <strong>All</strong>
-                <span>Sectors</span>
+                <strong>Multiple</strong>
+                <span>Industries</span>
               </div>
 
               <div className="stat-card">
@@ -296,18 +291,14 @@ function Home() {
           </div>
 
         </div>
-
       </section>
 
-      {/* =========================================
-          SKILLED MANPOWER
-      ========================================= */}
 
-      <section
-        className="section skilled-section"
-        id="skilled-manpower"
-      >
+      {/* =====================================================
+          SKILLED WORKFORCE
+      ===================================================== */}
 
+      <section className="section skilled-section">
         <div className="container">
 
           <div className="section-heading">
@@ -317,34 +308,31 @@ function Home() {
             </span>
 
             <h2>
-              Skilled Workforce for
-              Technical &amp; Industrial Needs
+              Skilled Workforce Categories
             </h2>
 
-            <div className="orange-line center-line" />
+            <div className="orange-line center-line"></div>
 
             <p>
-              Get experienced and skilled manpower for
-              technical, production, maintenance and
-              project requirements.
+              Experienced workers and technical professionals
+              for specialized project and operational
+              requirements.
             </p>
 
           </div>
 
           <div className="skilled-grid">
 
-            {skilledManpower.map((worker) => (
+            {skilledWorkers.map((worker) => (
               <article
                 className="skilled-card"
                 key={worker.title}
               >
 
                 <div className="service-icon">
-
                   <span className="material-symbols-outlined">
                     {worker.icon}
                   </span>
-
                 </div>
 
                 <div className="service-card-content">
@@ -359,13 +347,13 @@ function Home() {
 
                 </div>
 
-                <a href="#contact">
-                  Hire Workforce
+                <Link to="/labour-categories">
+                  View Category
 
                   <span className="material-symbols-outlined">
                     arrow_forward
                   </span>
-                </a>
+                </Link>
 
               </article>
             ))}
@@ -373,18 +361,14 @@ function Home() {
           </div>
 
         </div>
-
       </section>
 
-      {/* =========================================
-          UNSKILLED MANPOWER
-      ========================================= */}
 
-      <section
-        className="section general-section"
-        id="unskilled-manpower"
-      >
+      {/* =====================================================
+          GENERAL / UNSKILLED
+      ===================================================== */}
 
+      <section className="section general-section">
         <div className="container">
 
           <div className="general-header">
@@ -392,44 +376,41 @@ function Home() {
             <div>
 
               <span className="eyebrow">
-                UNSKILLED &amp; GENERAL MANPOWER
+                GENERAL MANPOWER
               </span>
 
               <h2>
-                Reliable Workforce for
-                Day-to-Day Operations
+                Unskilled &amp; Support Workforce
               </h2>
 
-              <div className="orange-line" />
+              <div className="orange-line"></div>
 
             </div>
 
             <p>
-              Flexible manpower for operational,
-              warehouse, facility and site-support
-              requirements.
+              Flexible workforce for site operations,
+              logistics, warehousing, support services and
+              general labour requirements.
             </p>
 
           </div>
 
           <div className="general-grid">
 
-            {generalManpower.map((service) => (
+            {generalWorkers.map((worker) => (
               <article
                 className="general-card"
-                key={service.title}
+                key={worker.title}
               >
 
                 <div className="general-icon">
-
                   <span className="material-symbols-outlined">
-                    {service.icon}
+                    {worker.icon}
                   </span>
-
                 </div>
 
                 <h3>
-                  {service.title}
+                  {worker.title}
                 </h3>
 
               </article>
@@ -440,19 +421,17 @@ function Home() {
           <div className="general-cta">
 
             <div>
-
               <strong>
-                Need general manpower for your operation?
+                Need manpower for your project?
               </strong>
 
               <span>
-                Tell us your requirement and workforce size.
+                Tell us your requirement and workforce needs.
               </span>
-
             </div>
 
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="button button-orange"
             >
               Request Manpower
@@ -460,23 +439,19 @@ function Home() {
               <span className="material-symbols-outlined">
                 arrow_forward
               </span>
-            </a>
+            </Link>
 
           </div>
 
         </div>
-
       </section>
 
-      {/* =========================================
+
+      {/* =====================================================
           INDUSTRIES
-      ========================================= */}
+      ===================================================== */}
 
-      <section
-        className="section industries-section"
-        id="industries"
-      >
-
+      <section className="section industries-section">
         <div className="container">
 
           <div className="section-heading">
@@ -486,14 +461,15 @@ function Home() {
             </span>
 
             <h2>
-              Manpower for Multiple Sectors
+              Manpower Across Multiple Industries
             </h2>
 
-            <div className="orange-line center-line" />
+            <div className="orange-line center-line"></div>
 
             <p>
-              Workforce solutions designed around the
-              operational needs of different industries.
+              Workforce solutions for businesses and projects
+              across construction, industrial, commercial,
+              infrastructure and logistics sectors.
             </p>
 
           </div>
@@ -507,11 +483,9 @@ function Home() {
               >
 
                 <div className="industry-icon">
-
                   <span className="material-symbols-outlined">
                     {industry.icon}
                   </span>
-
                 </div>
 
                 <h3>
@@ -522,13 +496,13 @@ function Home() {
                   {industry.description}
                 </p>
 
-                <a href="#contact">
-                  Enquire Now
+                <Link to="/industries-served">
+                  Explore Industry
 
                   <span className="material-symbols-outlined">
                     arrow_forward
                   </span>
-                </a>
+                </Link>
 
               </article>
             ))}
@@ -536,15 +510,14 @@ function Home() {
           </div>
 
         </div>
-
       </section>
 
-      {/* =========================================
+
+      {/* =====================================================
           WHY SHREEJI
-      ========================================= */}
+      ===================================================== */}
 
       <section className="section why-section">
-
         <div className="container">
 
           <div className="why-grid">
@@ -552,16 +525,20 @@ function Home() {
             <div className="why-image">
 
               <img
-                src="/images/workforce.jpg"
+                src={heroImage}
                 alt="ShreeJi Enterprises manpower workforce"
               />
 
               <div className="image-label">
+
                 <span className="material-symbols-outlined">
-                  groups
+                  verified
                 </span>
 
-                Skilled &amp; Unskilled Workforce
+                <span>
+                  Trusted Workforce Solutions
+                </span>
+
               </div>
 
             </div>
@@ -573,18 +550,16 @@ function Home() {
               </span>
 
               <h2>
-                The Workforce You Need,
-                When You Need It
+                A Workforce Partner Built Around Your Requirements
               </h2>
 
-              <div className="orange-line" />
+              <div className="orange-line"></div>
 
               <p>
-                Every business has different manpower
-                requirements. We provide workforce
-                solutions based on your operational needs,
-                project requirements and workforce
-                category.
+                From individual skilled workers to larger
+                workforce requirements, we focus on providing
+                practical manpower solutions that fit your
+                project, site and operational needs.
               </p>
 
               <div className="benefits-grid">
@@ -596,11 +571,9 @@ function Home() {
                   >
 
                     <div className="benefit-icon">
-
                       <span className="material-symbols-outlined">
                         {benefit.icon}
                       </span>
-
                     </div>
 
                     <div>
@@ -625,15 +598,14 @@ function Home() {
           </div>
 
         </div>
-
       </section>
 
-      {/* =========================================
+
+      {/* =====================================================
           SERVICE AREAS
-      ========================================= */}
+      ===================================================== */}
 
       <section className="section areas-section">
-
         <div className="container">
 
           <div className="areas-inner">
@@ -645,22 +617,20 @@ function Home() {
               </span>
 
               <h2>
-                Serving Businesses Across
-                Delhi NCR
+                Manpower Supply Across North India
               </h2>
 
-              <div className="orange-line" />
+              <div className="orange-line"></div>
 
               <p>
-                We support businesses and projects across
-                major industrial, commercial and
-                operational locations in the Delhi NCR
-                region.
+                We support projects and businesses with
+                manpower requirements across Noida, Greater
+                Noida, Delhi NCR and surrounding regions.
               </p>
 
               <div className="areas-list">
 
-                {serviceAreas.map((area) => (
+                {areas.map((area) => (
                   <span
                     className="area-tag"
                     key={area}
@@ -677,38 +647,54 @@ function Home() {
 
             </div>
 
-            <div className="areas-visual">
 
-              <span className="material-symbols-outlined">
-                location_on
-              </span>
+            {/* =================================================
+                DELHI NCR MAP
+            ================================================= */}
 
-              <strong>
-                Delhi NCR
-              </strong>
+            <div className="areas-map">
 
-              <span>
-                Workforce deployment across
-                key business locations
-              </span>
+              <iframe
+                title="Delhi NCR Map"
+                src="https://www.google.com/maps?q=Dahiya+Complex,+B-12,+near+Shree+Makhan+Bhog,+Kundli,+Sonipat,+Haryana+131028,+India&output=embed"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              <div className="map-overlay">
+
+                <span className="material-symbols-outlined">
+                  location_on
+                </span>
+
+                <div>
+                  <strong>
+                    Delhi NCR
+                  </strong>
+
+                  <span>
+                    Serving manpower requirements across
+                    Delhi, Noida, Greater Noida, Gurgaon,
+                    Ghaziabad &amp; Faridabad.
+                  </span>
+                </div>
+
+              </div>
 
             </div>
 
           </div>
 
         </div>
-
       </section>
 
-      {/* =========================================
-          CONTACT CTA
-      ========================================= */}
 
-      <section
-        className="contact-cta"
-        id="contact"
-      >
+      {/* =====================================================
+          FINAL CTA
+      ===================================================== */}
 
+      <section className="contact-cta">
         <div className="container">
 
           <div className="cta-inner">
@@ -716,45 +702,43 @@ function Home() {
             <div className="cta-content">
 
               <span className="eyebrow eyebrow-light">
-                NEED MANPOWER?
+                GET IN TOUCH
               </span>
 
               <h2>
-                Tell Us Your Manpower
-                Requirement
+                Looking for Reliable Manpower?
               </h2>
 
               <p>
-                Skilled manpower, unskilled manpower,
-                machine operators, general labour or
-                operational workforce — let us know what
-                your business needs.
+                Share your workforce requirement with
+                ShreeJi Enterprises and let us help you find
+                the right manpower for your project.
               </p>
 
             </div>
 
             <div className="cta-actions">
 
-              <a
-                href="mailto:shreejienterprises@gmail.com"
+              <Link
+                to="/contact"
                 className="button button-orange"
               >
-                Send Requirement
+                Get Manpower
 
                 <span className="material-symbols-outlined">
                   arrow_forward
                 </span>
-              </a>
+              </Link>
 
               <a
-                href="mailto:shreejienterprises@gmail.com"
+                href="mailto:shivank152@gmail.com"
                 className="cta-email"
               >
                 <span className="material-symbols-outlined">
                   mail
                 </span>
 
-                Contact ShreeJi Enterprises
+                shivank152@gmail.com
               </a>
 
             </div>
@@ -762,24 +746,26 @@ function Home() {
           </div>
 
         </div>
-
       </section>
 
-      {/* =========================================
+
+      {/* =====================================================
           WHATSAPP
-      ========================================= */}
+      ===================================================== */}
 
       <a
-        href="#contact"
+        href="https://wa.me/917379433305"
         className="whatsapp"
-        aria-label="Contact ShreeJi Enterprises"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contact ShreeJi Enterprises on WhatsApp"
       >
         <span className="material-symbols-outlined">
           chat
         </span>
       </a>
 
-    </main>
+    </div>
   );
 }
 

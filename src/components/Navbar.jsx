@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
+import logo from "../assets/logo.png";
+
 import "./Navbar.css";
 
 function Navbar() {
@@ -12,30 +14,31 @@ function Navbar() {
 
   return (
     <header className="site-header">
-
       <div className="navbar-container">
 
+        {/* BRAND */}
         <Link
           to="/"
           className="brand"
           onClick={closeMenu}
         >
-          <span className="brand-mark">
-            SJ
-          </span>
+          <img
+             src={logo}
+            alt="ShreeJi Enterprises"
+            className="brand-logo"
+          />
 
           <span className="brand-name">
             ShreeJi Enterprises
           </span>
         </Link>
 
-
+        {/* NAVIGATION */}
         <nav
           className={`desktop-nav ${
             menuOpen ? "mobile-open" : ""
           }`}
         >
-
           <NavLink
             to="/"
             end
@@ -79,6 +82,7 @@ function Navbar() {
             Contact Us
           </NavLink>
 
+          {/* MOBILE CALL */}
           <a
             className="mobile-call-button"
             href="tel:+917379433305"
@@ -90,10 +94,9 @@ function Navbar() {
 
             Call +91 73794 33305
           </a>
-
         </nav>
 
-
+        {/* DESKTOP CALL */}
         <a
           href="tel:+917379433305"
           className="header-call"
@@ -105,7 +108,7 @@ function Navbar() {
           <span>Call Now</span>
         </a>
 
-
+        {/* MOBILE MENU */}
         <button
           type="button"
           className={`menu-toggle ${
@@ -127,7 +130,6 @@ function Navbar() {
         </button>
 
       </div>
-
     </header>
   );
 }

@@ -1,10 +1,14 @@
 import { useState } from "react";
+
+import { db } from "../firebase";
+
 import {
-  db,
   collection,
   addDoc,
   serverTimestamp,
-} from "../firebase";
+} from "firebase/firestore";
+
+import "./Contact.css";
 
 import "./Contact.css";
 

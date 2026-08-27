@@ -1,26 +1,60 @@
+/* =========================================================
+   SHREEJI ENTERPRISES
+   HOME PAGE
+========================================================= */
+
 .home {
   --surface: #faf9fd;
   --surface-gray: #f4f7f9;
   --surface-low: #f4f3f7;
+
   --navy: #1a365d;
   --navy-dark: #002045;
+
   --orange: #e67e22;
   --orange-dark: #c96b15;
+
   --text: #1a1c1e;
   --muted: #43474e;
+
   --border: #c4c6cf;
-  --green: #2d6a4f;
+
+  width: 100%;
+  min-height: 100vh;
 
   color: var(--text);
   background: var(--surface);
 
   font-family: "Hanken Grotesk", sans-serif;
+
+  overflow-x: hidden;
+}
+
+.home *,
+.home *::before,
+.home *::after {
+  box-sizing: border-box;
+}
+
+.home img {
+  max-width: 100%;
+}
+
+.home a {
+  text-decoration: none;
+}
+
+.home h1,
+.home h2,
+.home h3,
+.home p {
+  overflow-wrap: break-word;
 }
 
 
-/* =========================================
+/* =========================================================
    CONTAINER
-========================================= */
+========================================================= */
 
 .container {
   width: min(
@@ -32,13 +66,75 @@
 }
 
 
-/* =========================================
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.section {
+  width: 100%;
+
+  padding: 80px 0;
+}
+
+.eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--orange);
+
+  font-size: 13px;
+  line-height: 18px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+}
+
+.eyebrow-light {
+  color: #ffb783;
+}
+
+.section h2 {
+  margin: 0;
+
+  color: var(--navy);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 32px;
+  line-height: 40px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.01em;
+}
+
+.orange-line {
+  width: 64px;
+  height: 4px;
+
+  margin-top: 16px;
+
+  background: var(--orange);
+
+  border-radius: 4px;
+}
+
+.center-line {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/* =========================================================
    HERO
-========================================= */
+========================================================= */
 
 .hero {
   position: relative;
 
+  width: 100%;
   min-height: 700px;
 
   display: flex;
@@ -46,45 +142,50 @@
 
   overflow: hidden;
 
-  background: var(--navy);
-}
+  /*
+    IMPORTANT:
+    Image comes from src/assets through React import
+    and is injected through --hero-image.
+  */
 
-
-.hero-background {
-  position: absolute;
-
-  inset: 0;
-
-  z-index: 0;
-
-  background-image:
-    url("/images/hero-manpower.jpg");
-
+  background-image: var(--hero-image);
   background-size: cover;
-
-  background-position: center;
-
+  background-position: center center;
   background-repeat: no-repeat;
+
+  isolation: isolate;
 }
 
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
 
 .hero-overlay {
   position: absolute;
 
   inset: 0;
 
-  z-index: 1;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
 
   background:
     linear-gradient(
       90deg,
-      rgba(0, 32, 69, 0.94) 0%,
-      rgba(18, 54, 93, 0.86) 42%,
-      rgba(26, 54, 93, 0.64) 72%,
+      rgba(0, 32, 69, 0.96) 0%,
+      rgba(0, 32, 69, 0.90) 28%,
+      rgba(18, 54, 93, 0.76) 55%,
+      rgba(26, 54, 93, 0.58) 78%,
       rgba(26, 54, 93, 0.45) 100%
     );
 }
 
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
 
 .hero-inner {
   position: relative;
@@ -99,13 +200,17 @@
   margin: 0 auto;
 }
 
-
 .hero-content {
-  max-width: 850px;
+  width: 100%;
+  max-width: 900px;
 
   padding: 100px 0;
 }
 
+
+/* =========================================================
+   HERO BADGE
+========================================================= */
 
 .hero-badge {
   width: fit-content;
@@ -139,7 +244,6 @@
   border-radius: 999px;
 
   font-size: 14px;
-
   line-height: 20px;
 
   font-weight: 600;
@@ -147,25 +251,31 @@
   backdrop-filter: blur(6px);
 }
 
-
 .hero-badge .material-symbols-outlined {
   color: var(--orange);
 
   font-size: 19px;
+
+  line-height: 1;
 }
 
 
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
 .hero h1 {
-  max-width: 900px;
+  width: 100%;
+  max-width: 950px;
 
   margin: 0;
+  padding: 0;
 
   color: #ffffff;
 
   font-family: "Montserrat", sans-serif;
 
   font-size: 52px;
-
   line-height: 60px;
 
   font-weight: 800;
@@ -174,12 +284,12 @@
 }
 
 
-.hero h1 span {
-  color: #ffffff;
-}
-
+/* =========================================================
+   HERO PARAGRAPH
+========================================================= */
 
 .hero p {
+  width: 100%;
   max-width: 720px;
 
   margin: 28px 0 0;
@@ -187,21 +297,13 @@
   color: #ffffff;
 
   font-size: 19px;
-
   line-height: 30px;
 }
 
 
-.hero-buttons {
-  display: flex;
-
-  align-items: center;
-
-  gap: 16px;
-
-  margin-top: 34px;
-}
-
+/* =========================================================
+   BUTTONS
+========================================================= */
 
 .button {
   min-height: 52px;
@@ -209,7 +311,6 @@
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 10px;
@@ -218,20 +319,22 @@
 
   border-radius: 4px;
 
-  text-decoration: none;
-
   font-size: 15px;
-
   line-height: 20px;
 
   font-weight: 600;
 
+  cursor: pointer;
+
   transition:
     transform 180ms ease,
     background 180ms ease,
-    border-color 180ms ease;
+    border-color 180ms ease,
+    color 180ms ease;
 }
 
+
+/* ORANGE */
 
 .button-orange {
   color: #ffffff;
@@ -240,7 +343,6 @@
 
   border: 1px solid var(--orange);
 }
-
 
 .button-orange:hover {
   color: #ffffff;
@@ -253,6 +355,8 @@
 }
 
 
+/* OUTLINE */
+
 .button-outline {
   color: #ffffff;
 
@@ -260,7 +364,6 @@
 
   border: 2px solid #ffffff;
 }
-
 
 .button-outline:hover {
   color: #ffffff;
@@ -276,6 +379,22 @@
 }
 
 
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 34px;
+}
+
 .hero .button {
   min-height: 64px;
 
@@ -284,21 +403,25 @@
   font-size: 16px;
 }
 
-
 .hero .button-orange {
   min-width: 210px;
 }
-
 
 .hero .button-outline {
   min-width: 180px;
 }
 
 
+/* =========================================================
+   HERO SERVICES
+========================================================= */
+
 .hero-services {
   display: flex;
 
   align-items: center;
+
+  flex-wrap: wrap;
 
   gap: 24px;
 
@@ -307,10 +430,10 @@
   color: #d6e3ff;
 
   font-size: 14px;
+  line-height: 20px;
 
   font-weight: 600;
 }
-
 
 .hero-services span {
   position: relative;
@@ -318,18 +441,15 @@
   padding-left: 18px;
 }
 
-
 .hero-services span::before {
   content: "";
 
   position: absolute;
 
   left: 0;
-
   top: 50%;
 
   width: 7px;
-
   height: 7px;
 
   transform: translateY(-50%);
@@ -340,77 +460,9 @@
 }
 
 
-/* =========================================
-   COMMON SECTION
-========================================= */
-
-.section {
-  padding: 80px 0;
-}
-
-
-.eyebrow {
-  display: block;
-
-  margin-bottom: 10px;
-
-  color: var(--orange);
-
-  font-size: 13px;
-
-  line-height: 18px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.05em;
-}
-
-
-.eyebrow-light {
-  color: #ffb783;
-}
-
-
-.section h2 {
-  margin: 0;
-
-  color: var(--navy);
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 32px;
-
-  line-height: 40px;
-
-  font-weight: 700;
-
-  letter-spacing: -0.01em;
-}
-
-
-.orange-line {
-  width: 64px;
-
-  height: 4px;
-
-  margin-top: 16px;
-
-  background: var(--orange);
-
-  border-radius: 4px;
-}
-
-
-.center-line {
-  margin-left: auto;
-
-  margin-right: auto;
-}
-
-
-/* =========================================
+/* =========================================================
    INTRO
-========================================= */
+========================================================= */
 
 .intro-section {
   padding: 72px 0;
@@ -420,19 +472,21 @@
   border-bottom: 1px solid var(--border);
 }
 
-
 .intro-grid {
   display: grid;
 
   grid-template-columns:
-    1.2fr
-    1fr;
+    minmax(0, 1.2fr)
+    minmax(0, 1fr);
 
   gap: 64px;
 
   align-items: center;
 }
 
+.intro-content {
+  min-width: 0;
+}
 
 .intro-content p {
   max-width: 720px;
@@ -442,21 +496,25 @@
   color: var(--muted);
 
   font-size: 17px;
-
   line-height: 28px;
 }
 
 
+/* =========================================================
+   STATS
+========================================================= */
+
 .stats-grid {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
 
   gap: 12px;
 }
 
-
 .stat-card {
+  min-width: 0;
   min-height: 120px;
 
   display: flex;
@@ -464,8 +522,9 @@
   flex-direction: column;
 
   align-items: center;
-
   justify-content: center;
+
+  padding: 20px;
 
   text-align: center;
 
@@ -476,17 +535,14 @@
   border-radius: 8px;
 }
 
-
 .stat-card strong {
   color: var(--navy);
 
   font-family: "Montserrat", sans-serif;
 
   font-size: 20px;
-
   line-height: 28px;
 }
-
 
 .stat-card span {
   margin-top: 3px;
@@ -494,14 +550,17 @@
   color: var(--muted);
 
   font-size: 14px;
+  line-height: 20px;
 }
 
 
-/* =========================================
+/* =========================================================
    SECTION HEADING
-========================================= */
+========================================================= */
 
 .section-heading {
+  width: 100%;
+
   max-width: 760px;
 
   margin: 0 auto 48px;
@@ -509,26 +568,23 @@
   text-align: center;
 }
 
-
 .section-heading p {
   margin: 18px 0 0;
 
   color: var(--muted);
 
   font-size: 16px;
-
   line-height: 25px;
 }
 
 
-/* =========================================
+/* =========================================================
    SKILLED
-========================================= */
+========================================================= */
 
 .skilled-section {
   background: var(--surface);
 }
-
 
 .skilled-grid {
   display: grid;
@@ -539,10 +595,10 @@
   gap: 20px;
 }
 
-
 .skilled-card {
   position: relative;
 
+  min-width: 0;
   min-height: 270px;
 
   display: flex;
@@ -550,6 +606,8 @@
   flex-direction: column;
 
   padding: 28px;
+
+  overflow: hidden;
 
   background: #ffffff;
 
@@ -563,7 +621,6 @@
     box-shadow 180ms ease;
 }
 
-
 .skilled-card:hover {
   transform: translateY(-4px);
 
@@ -575,15 +632,19 @@
 }
 
 
+/* =========================================================
+   SERVICE ICON
+========================================================= */
+
 .service-icon {
   width: 58px;
-
   height: 58px;
+
+  flex-shrink: 0;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   color: var(--navy);
@@ -593,16 +654,22 @@
   border-radius: 8px;
 }
 
-
 .service-icon .material-symbols-outlined {
   font-size: 29px;
+
+  line-height: 1;
 }
 
+
+/* =========================================================
+   SERVICE CARD CONTENT
+========================================================= */
 
 .service-card-content {
+  min-width: 0;
+
   margin-top: 22px;
 }
-
 
 .skilled-card h3 {
   margin: 0;
@@ -612,10 +679,10 @@
   font-family: "Montserrat", sans-serif;
 
   font-size: 20px;
-
   line-height: 28px;
-}
 
+  font-weight: 700;
+}
 
 .skilled-card p {
   margin: 8px 0 0;
@@ -623,10 +690,8 @@
   color: var(--muted);
 
   font-size: 14px;
-
   line-height: 22px;
 }
-
 
 .skilled-card > a {
   display: inline-flex;
@@ -635,39 +700,41 @@
 
   gap: 5px;
 
+  width: fit-content;
+
   margin-top: auto;
 
   padding-top: 20px;
 
   color: var(--orange);
 
-  text-decoration: none;
-
   font-size: 14px;
+  line-height: 20px;
 
   font-weight: 600;
 }
 
+.skilled-card > a:hover {
+  color: var(--orange-dark);
+}
 
 .skilled-card > a .material-symbols-outlined {
   font-size: 18px;
 }
 
 
-/* =========================================
-   GENERAL / UNSKILLED
-========================================= */
+/* =========================================================
+   GENERAL
+========================================================= */
 
 .general-section {
   background: var(--surface-low);
 }
 
-
 .general-header {
   display: flex;
 
   align-items: flex-end;
-
   justify-content: space-between;
 
   gap: 48px;
@@ -675,8 +742,12 @@
   margin-bottom: 40px;
 }
 
+.general-header > div {
+  min-width: 0;
+}
 
 .general-header > p {
+  width: 100%;
   max-width: 430px;
 
   margin: 0;
@@ -684,10 +755,8 @@
   color: var(--muted);
 
   font-size: 16px;
-
   line-height: 25px;
 }
-
 
 .general-grid {
   display: grid;
@@ -698,8 +767,8 @@
   gap: 16px;
 }
 
-
 .general-card {
+  min-width: 0;
   min-height: 145px;
 
   display: flex;
@@ -707,7 +776,6 @@
   flex-direction: column;
 
   align-items: flex-start;
-
   justify-content: center;
 
   padding: 22px;
@@ -720,26 +788,27 @@
 
   transition:
     transform 180ms ease,
-    border-color 180ms ease;
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
-
 
 .general-card:hover {
   transform: translateY(-3px);
 
   border-color: var(--orange);
-}
 
+  box-shadow:
+    0 7px 18px
+    rgba(26, 54, 93, 0.08);
+}
 
 .general-icon {
   width: 44px;
-
   height: 44px;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   color: var(--orange);
@@ -749,13 +818,13 @@
   border-radius: 4px;
 }
 
-
 .general-icon .material-symbols-outlined {
   font-size: 24px;
 }
 
-
 .general-card h3 {
+  width: 100%;
+
   margin: 14px 0 0;
 
   color: var(--navy);
@@ -763,16 +832,18 @@
   font-family: "Montserrat", sans-serif;
 
   font-size: 17px;
-
   line-height: 24px;
 }
 
+
+/* =========================================================
+   GENERAL CTA
+========================================================= */
 
 .general-cta {
   display: flex;
 
   align-items: center;
-
   justify-content: space-between;
 
   gap: 24px;
@@ -788,8 +859,9 @@
   border-radius: 8px;
 }
 
-
 .general-cta > div {
+  min-width: 0;
+
   display: flex;
 
   flex-direction: column;
@@ -797,29 +869,34 @@
   gap: 5px;
 }
 
-
 .general-cta strong {
+  color: #ffffff;
+
   font-family: "Montserrat", sans-serif;
 
   font-size: 18px;
+  line-height: 25px;
 }
-
 
 .general-cta span {
   color: #d6e3ff;
 
   font-size: 14px;
+  line-height: 21px;
+}
+
+.general-cta .button-orange {
+  flex-shrink: 0;
 }
 
 
-/* =========================================
+/* =========================================================
    INDUSTRIES
-========================================= */
+========================================================= */
 
 .industries-section {
   background: #ffffff;
 }
-
 
 .industries-grid {
   display: grid;
@@ -830,8 +907,8 @@
   gap: 20px;
 }
 
-
 .industry-card {
+  min-width: 0;
   min-height: 280px;
 
   display: flex;
@@ -852,7 +929,6 @@
     box-shadow 180ms ease;
 }
 
-
 .industry-card:hover {
   transform: translateY(-4px);
 
@@ -863,16 +939,15 @@
     rgba(26, 54, 93, 0.10);
 }
 
-
 .industry-icon {
   width: 60px;
-
   height: 60px;
+
+  flex-shrink: 0;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   color: #ffffff;
@@ -882,11 +957,9 @@
   border-radius: 8px;
 }
 
-
 .industry-icon .material-symbols-outlined {
   font-size: 30px;
 }
-
 
 .industry-card h3 {
   margin: 22px 0 0;
@@ -896,10 +969,8 @@
   font-family: "Montserrat", sans-serif;
 
   font-size: 20px;
-
   line-height: 28px;
 }
-
 
 .industry-card p {
   margin: 8px 0 0;
@@ -907,10 +978,8 @@
   color: var(--muted);
 
   font-size: 14px;
-
   line-height: 22px;
 }
-
 
 .industry-card a {
   display: inline-flex;
@@ -919,50 +988,53 @@
 
   gap: 5px;
 
+  width: fit-content;
+
   margin-top: auto;
 
   padding-top: 18px;
 
   color: var(--orange);
 
-  text-decoration: none;
-
   font-size: 14px;
+  line-height: 20px;
 
   font-weight: 600;
 }
 
+.industry-card a:hover {
+  color: var(--orange-dark);
+}
 
 .industry-card a .material-symbols-outlined {
   font-size: 18px;
 }
 
 
-/* =========================================
+/* =========================================================
    WHY SHREEJI
-========================================= */
+========================================================= */
 
 .why-section {
   background: var(--surface-gray);
 }
 
-
 .why-grid {
   display: grid;
 
   grid-template-columns:
-    0.9fr
-    1.1fr;
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
 
   gap: 56px;
 
   align-items: center;
 }
 
-
 .why-image {
   position: relative;
 
+  width: 100%;
   height: 520px;
 
   overflow: hidden;
@@ -970,25 +1042,22 @@
   border-radius: 8px;
 }
 
-
 .why-image img {
   width: 100%;
-
   height: 100%;
 
   display: block;
 
   object-fit: cover;
-}
 
+  object-position: center;
+}
 
 .image-label {
   position: absolute;
 
   left: 20px;
-
   right: 20px;
-
   bottom: 20px;
 
   display: flex;
@@ -1015,11 +1084,13 @@
   font-weight: 600;
 }
 
-
 .image-label .material-symbols-outlined {
   color: var(--orange);
 }
 
+.why-content {
+  min-width: 0;
+}
 
 .why-content > p {
   max-width: 650px;
@@ -1029,21 +1100,24 @@
   color: var(--muted);
 
   font-size: 16px;
-
   line-height: 25px;
 }
 
 
+/* =========================================================
+   BENEFITS
+========================================================= */
+
 .benefits-grid {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
 
   gap: 24px;
 
   margin-top: 32px;
 }
-
 
 .benefit {
   display: flex;
@@ -1051,12 +1125,12 @@
   align-items: flex-start;
 
   gap: 12px;
-}
 
+  min-width: 0;
+}
 
 .benefit-icon {
   width: 40px;
-
   height: 40px;
 
   flex-shrink: 0;
@@ -1064,7 +1138,6 @@
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   color: var(--orange);
@@ -1076,11 +1149,9 @@
   border-radius: 4px;
 }
 
-
 .benefit-icon .material-symbols-outlined {
   font-size: 21px;
 }
-
 
 .benefit h3 {
   margin: 0;
@@ -1090,10 +1161,8 @@
   font-family: "Montserrat", sans-serif;
 
   font-size: 15px;
-
   line-height: 20px;
 }
-
 
 .benefit p {
   margin: 4px 0 0;
@@ -1101,34 +1170,33 @@
   color: var(--muted);
 
   font-size: 13px;
-
   line-height: 19px;
 }
 
 
-/* =========================================
-   AREAS
-========================================= */
+/* =========================================================
+   SERVICE AREAS
+========================================================= */
 
 .areas-section {
   background: #ffffff;
 }
 
-
 .areas-inner {
   display: grid;
 
   grid-template-columns:
-    1fr
-    0.8fr;
+    minmax(0, 1fr)
+    minmax(0, 0.8fr);
 
   gap: 48px;
 
   align-items: stretch;
 }
 
-
 .areas-content {
+  min-width: 0;
+
   padding: 36px;
 
   background: var(--surface-gray);
@@ -1138,7 +1206,6 @@
   border-radius: 8px;
 }
 
-
 .areas-content > p {
   max-width: 650px;
 
@@ -1147,10 +1214,8 @@
   color: var(--muted);
 
   font-size: 16px;
-
   line-height: 25px;
 }
-
 
 .areas-list {
   display: flex;
@@ -1159,7 +1224,6 @@
 
   gap: 10px;
 }
-
 
 .area-tag {
   display: inline-flex;
@@ -1183,7 +1247,6 @@
   font-weight: 600;
 }
 
-
 .area-tag .material-symbols-outlined {
   color: var(--orange);
 
@@ -1191,64 +1254,133 @@
 }
 
 
-.areas-visual {
+/* =========================================================
+   DELHI NCR MAP
+========================================================= */
+
+.areas-map {
+  position: relative;
+
+  width: 100%;
   min-height: 360px;
+
+  overflow: hidden;
+
+  background: #e9eef2;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+}
+
+.areas-map iframe {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+}
+
+
+/* =========================================================
+   MAP INFO OVERLAY
+========================================================= */
+
+.map-overlay {
+  position: absolute;
+
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 16px;
+
+  color: #ffffff;
+
+  background: rgba(
+    0,
+    32,
+    69,
+    0.92
+  );
+
+  border-radius: 6px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(0, 0, 0, 0.18);
+
+  pointer-events: none;
+}
+
+.map-overlay > .material-symbols-outlined {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: var(--orange);
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.10
+  );
+
+  border-radius: 50%;
+
+  font-size: 23px;
+}
+
+.map-overlay div {
+  min-width: 0;
 
   display: flex;
 
   flex-direction: column;
 
-  align-items: center;
+  gap: 3px;
+}
 
-  justify-content: center;
-
-  text-align: center;
-
+.map-overlay strong {
   color: #ffffff;
-
-  background:
-    linear-gradient(
-      135deg,
-      #1a365d,
-      #002045
-    );
-
-  border-radius: 8px;
-}
-
-
-.areas-visual .material-symbols-outlined {
-  color: var(--orange);
-
-  font-size: 70px;
-}
-
-
-.areas-visual strong {
-  margin-top: 8px;
 
   font-family: "Montserrat", sans-serif;
 
-  font-size: 28px;
+  font-size: 17px;
+  line-height: 23px;
 }
 
-
-.areas-visual > span:last-child {
-  max-width: 260px;
-
-  margin-top: 8px;
-
+.map-overlay div > span {
   color: #d6e3ff;
 
-  font-size: 14px;
-
-  line-height: 21px;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 
-/* =========================================
-   CTA
-========================================= */
+/* =========================================================
+   FINAL CTA
+========================================================= */
 
 .contact-cta {
   padding: 72px 0;
@@ -1258,22 +1390,20 @@
   background: var(--navy-dark);
 }
 
-
 .cta-inner {
   display: flex;
 
   align-items: center;
-
   justify-content: space-between;
 
   gap: 60px;
 }
 
-
 .cta-content {
+  min-width: 0;
+
   max-width: 700px;
 }
-
 
 .cta-content h2 {
   margin: 0;
@@ -1283,10 +1413,8 @@
   font-family: "Montserrat", sans-serif;
 
   font-size: 36px;
-
   line-height: 44px;
 }
-
 
 .cta-content p {
   max-width: 650px;
@@ -1296,10 +1424,8 @@
   color: #d6e3ff;
 
   font-size: 16px;
-
   line-height: 25px;
 }
-
 
 .cta-actions {
   display: flex;
@@ -1313,55 +1439,48 @@
   flex-shrink: 0;
 }
 
-
 .cta-actions .button {
   min-width: 230px;
 
   min-height: 56px;
 }
 
-
 .cta-email {
   display: inline-flex;
 
   align-items: center;
+  justify-content: center;
 
   gap: 7px;
 
   color: #d6e3ff;
 
-  text-decoration: none;
-
   font-size: 13px;
 }
-
 
 .cta-email:hover {
   color: #ffffff;
 }
 
 
-/* =========================================
+/* =========================================================
    WHATSAPP
-========================================= */
+========================================================= */
 
 .whatsapp {
   position: fixed;
 
   right: 24px;
-
   bottom: 24px;
 
-  z-index: 999;
+  z-index: 9999;
 
   width: 56px;
-
   height: 56px;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   color: #ffffff;
@@ -1369,8 +1488,6 @@
   background: #25d366;
 
   border-radius: 50%;
-
-  text-decoration: none;
 
   box-shadow:
     0 5px 18px
@@ -1381,29 +1498,41 @@
     background 180ms ease;
 }
 
-
 .whatsapp:hover {
+  color: #ffffff;
+
   background: #20bd5a;
 
   transform: translateY(-2px);
 }
-
 
 .whatsapp .material-symbols-outlined {
   font-size: 29px;
 }
 
 
-/* =========================================
+/* =========================================================
    TABLET
-========================================= */
+========================================================= */
 
 @media (max-width: 1000px) {
+
+  .container {
+    width: min(
+      920px,
+      calc(100% - 40px)
+    );
+  }
 
   .hero {
     min-height: 650px;
   }
 
+  .hero-content {
+    max-width: 760px;
+
+    padding: 90px 0;
+  }
 
   .hero h1 {
     font-size: 44px;
@@ -1411,6 +1540,11 @@
     line-height: 52px;
   }
 
+  .hero p {
+    font-size: 18px;
+
+    line-height: 28px;
+  }
 
   .intro-grid {
     grid-template-columns: 1fr;
@@ -1418,24 +1552,20 @@
     gap: 36px;
   }
 
-
   .skilled-grid {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
   }
-
 
   .general-grid {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
   }
 
-
   .industries-grid {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
   }
-
 
   .why-grid {
     grid-template-columns: 1fr;
@@ -1443,29 +1573,33 @@
     gap: 40px;
   }
 
-
   .why-image {
     height: 420px;
   }
-
 
   .areas-inner {
     grid-template-columns: 1fr;
   }
 
+  .areas-map {
+    min-height: 400px;
+  }
+
+  .cta-inner {
+    gap: 40px;
+  }
 }
 
 
-/* =========================================
+/* =========================================================
    MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 650px) {
 
   .container {
     width: calc(100% - 32px);
   }
-
 
   .section {
     padding: 64px 0;
@@ -1475,50 +1609,53 @@
   /* HERO */
 
   .hero {
-    min-height: 680px;
+    min-height: 650px;
+
+    background-position: center center;
   }
-
-
-  .hero-background {
-    background-position: 62% center;
-  }
-
 
   .hero-overlay {
     background:
       linear-gradient(
         90deg,
-        rgba(0, 32, 69, 0.95),
-        rgba(18, 54, 93, 0.82)
+        rgba(0, 32, 69, 0.96) 0%,
+        rgba(18, 54, 93, 0.82) 100%
       );
   }
-
 
   .hero-inner {
     width: calc(100% - 32px);
   }
 
-
   .hero-content {
+    max-width: 100%;
+
     padding: 70px 0;
   }
 
-
   .hero-badge {
-    font-size: 12px;
+    margin-bottom: 20px;
 
     padding: 8px 11px;
+
+    font-size: 12px;
+
+    line-height: 18px;
   }
 
+  .hero-badge .material-symbols-outlined {
+    font-size: 17px;
+  }
 
   .hero h1 {
+    max-width: 100%;
+
     font-size: 31px;
 
     line-height: 39px;
 
     letter-spacing: -0.015em;
   }
-
 
   .hero p {
     margin-top: 20px;
@@ -1529,16 +1666,19 @@
   }
 
 
+  /* HERO BUTTONS */
+
   .hero-buttons {
     flex-direction: column;
 
     align-items: stretch;
 
+    width: 100%;
+
     gap: 12px;
 
     margin-top: 28px;
   }
-
 
   .hero .button {
     width: 100%;
@@ -1549,14 +1689,20 @@
   }
 
 
-  .hero-services {
-    flex-wrap: wrap;
+  /* HERO SERVICES */
 
+  .hero-services {
     gap: 10px 18px;
 
     margin-top: 24px;
 
     font-size: 12px;
+
+    line-height: 18px;
+  }
+
+  .hero-services span {
+    padding-left: 15px;
   }
 
 
@@ -1568,16 +1714,47 @@
     line-height: 35px;
   }
 
+  .section-heading {
+    margin-bottom: 36px;
+  }
+
+  .section-heading p {
+    font-size: 15px;
+
+    line-height: 24px;
+  }
+
 
   /* INTRO */
+
+  .intro-section {
+    padding: 64px 0;
+  }
+
+  .intro-content p {
+    font-size: 15px;
+
+    line-height: 25px;
+  }
 
   .stats-grid {
     gap: 10px;
   }
 
-
   .stat-card {
     min-height: 105px;
+
+    padding: 15px 10px;
+  }
+
+  .stat-card strong {
+    font-size: 18px;
+
+    line-height: 25px;
+  }
+
+  .stat-card span {
+    font-size: 13px;
   }
 
 
@@ -1589,9 +1766,10 @@
     gap: 14px;
   }
 
-
   .skilled-card {
     min-height: 250px;
+
+    padding: 24px;
   }
 
 
@@ -1603,15 +1781,24 @@
     align-items: flex-start;
 
     gap: 18px;
+
+    margin-bottom: 30px;
   }
 
+  .general-header > p {
+    max-width: 100%;
+
+    font-size: 15px;
+
+    line-height: 24px;
+  }
 
   .general-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
 
     gap: 10px;
   }
-
 
   .general-card {
     min-height: 125px;
@@ -1619,20 +1806,21 @@
     padding: 16px;
   }
 
-
   .general-card h3 {
     font-size: 15px;
-  }
 
+    line-height: 21px;
+  }
 
   .general-cta {
     flex-direction: column;
 
     align-items: flex-start;
 
+    gap: 18px;
+
     padding: 22px;
   }
-
 
   .general-cta .button {
     width: 100%;
@@ -1647,39 +1835,115 @@
     gap: 14px;
   }
 
-
   .industry-card {
     min-height: 250px;
+
+    padding: 24px;
   }
 
 
   /* WHY */
 
+  .why-grid {
+    gap: 32px;
+  }
+
   .why-image {
     height: 340px;
   }
 
+  .image-label {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+
+    padding: 12px;
+
+    font-size: 13px;
+  }
+
+  .why-content > p {
+    margin-top: 18px;
+
+    font-size: 15px;
+
+    line-height: 24px;
+  }
 
   .benefits-grid {
     grid-template-columns: 1fr;
 
     gap: 18px;
+
+    margin-top: 26px;
   }
 
 
   /* AREAS */
 
+  .areas-inner {
+    gap: 20px;
+  }
+
   .areas-content {
     padding: 24px;
   }
 
+  .areas-content > p {
+    margin: 18px 0 22px;
 
-  .areas-visual {
+    font-size: 15px;
+
+    line-height: 24px;
+  }
+
+  .areas-list {
+    gap: 8px;
+  }
+
+  .area-tag {
+    padding: 8px 10px;
+
+    font-size: 13px;
+  }
+
+  .areas-map {
     min-height: 300px;
+  }
+
+  .map-overlay {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    padding: 12px;
+  }
+
+  .map-overlay > .material-symbols-outlined {
+    width: 36px;
+    height: 36px;
+
+    font-size: 21px;
+  }
+
+  .map-overlay strong {
+    font-size: 15px;
+
+    line-height: 20px;
+  }
+
+  .map-overlay div > span {
+    font-size: 11px;
+
+    line-height: 16px;
   }
 
 
   /* CTA */
+
+  .contact-cta {
+    padding: 60px 0;
+  }
 
   .cta-inner {
     flex-direction: column;
@@ -1689,6 +1953,9 @@
     gap: 32px;
   }
 
+  .cta-content {
+    width: 100%;
+  }
 
   .cta-content h2 {
     font-size: 29px;
@@ -1696,6 +1963,11 @@
     line-height: 37px;
   }
 
+  .cta-content p {
+    font-size: 15px;
+
+    line-height: 24px;
+  }
 
   .cta-actions {
     width: 100%;
@@ -1703,11 +1975,11 @@
     align-items: stretch;
   }
 
-
   .cta-actions .button {
     width: 100%;
-  }
 
+    min-width: 0;
+  }
 
   .cta-email {
     justify-content: center;
@@ -1718,28 +1990,35 @@
 
   .whatsapp {
     right: 16px;
-
     bottom: 16px;
+
+    width: 52px;
+    height: 52px;
   }
 
+  .whatsapp .material-symbols-outlined {
+    font-size: 26px;
+  }
 }
 
 
-/* =========================================
+/* =========================================================
    SMALL MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 400px) {
 
-  .general-grid {
-    grid-template-columns: 1fr;
+  .container {
+    width: calc(100% - 24px);
   }
 
-
-  .stats-grid {
-    grid-template-columns: 1fr;
+  .hero-inner {
+    width: calc(100% - 24px);
   }
 
+  .hero-content {
+    padding: 60px 0;
+  }
 
   .hero h1 {
     font-size: 28px;
@@ -1747,71 +2026,25 @@
     line-height: 36px;
   }
 
-}
-@media (max-width: 900px) {
-  .hero-content {
-    max-width: 700px;
-  }
-
-  .hero-buttons {
-    flex-wrap: wrap;
-  }
-
-  .experience-grid,
-  .services-grid,
-  .industries-grid {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ) !important;
-  }
-}
-
-@media (max-width: 650px) {
-  .hero {
-    min-height: 650px !important;
-  }
-
-  .hero-content {
-    padding: 70px 0 !important;
-  }
-
-  .hero h1 {
-    font-size: 34px !important;
-
-    line-height: 42px !important;
-  }
-
   .hero p {
-    font-size: 16px !important;
+    font-size: 15px;
 
-    line-height: 25px !important;
+    line-height: 24px;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-
-    align-items: stretch;
-
-    width: 100%;
-
-    gap: 12px;
+  .general-grid {
+    grid-template-columns: 1fr;
   }
 
-  .hero-buttons a,
-  .hero-buttons button {
-    width: 100%;
-
-    min-height: 52px;
+  .stats-grid {
+    grid-template-columns: 1fr;
   }
 
-  .experience-grid,
-  .services-grid,
-  .industries-grid {
-    grid-template-columns: 1fr !important;
+  .why-image {
+    height: 300px;
   }
 
-  .section {
-    padding: 64px 0 !important;
+  .areas-map {
+    min-height: 280px;
   }
 }

@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { auth } from "../firebase";
+
 import {
-  auth,
   signInWithEmailAndPassword,
-} from "../firebase";
+} from "firebase/auth";
+
 import "./AdminLogin.css";
 
 function AdminLogin() {
@@ -23,15 +26,15 @@ function AdminLogin() {
     try {
       await signInWithEmailAndPassword(
         auth,
-        email,
+        email.trim(),
         password
       );
 
       navigate("/admin");
-    } catch {
-      setError(
-        "Invalid email or password."
-      );
+    } catch (error) {
+      console.error("Admin login error:", error);
+
+      setError("Invalid email or password.");
     } finally {
       setLoading(false);
     }
@@ -56,31 +59,31 @@ function AdminLogin() {
 
         <form onSubmit={handleLogin}>
 
-          <label>
+          <label htmlFor="admin-email">
             Email
           </label>
 
           <input
+            id="admin-email"
             type="email"
             value={email}
-            onChange={(e) =>
-              setEmail(e.target.value)
-            }
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Admin email"
+            autoComplete="email"
             required
           />
 
-          <label>
+          <label htmlFor="admin-password">
             Password
           </label>
 
           <input
+            id="admin-password"
             type="password"
             value={password}
-            onChange={(e) =>
-              setPassword(e.target.value)
-            }
+            onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
+            autoComplete="current-password"
             required
           />
 
@@ -94,9 +97,7 @@ function AdminLogin() {
             type="submit"
             disabled={loading}
           >
-            {loading
-              ? "Signing in..."
-              : "Sign In"}
+            {loading ? "Signing in..." : "Sign In"}
           </button>
 
         </form>
