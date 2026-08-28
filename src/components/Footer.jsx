@@ -53,14 +53,14 @@ function Footer() {
             +91 95697 17055
           </a>
           <a
-            href="mailto:shivank152@gmail.com"
+            href="mailto:shivank152p@gmail.com"
             className="footer-phone"
           >
             <span className="material-symbols-outlined">
               email
             </span>
 
-            shivank152@gmail.com
+            shivank152p@gmail.com
           </a>
 
         </div>

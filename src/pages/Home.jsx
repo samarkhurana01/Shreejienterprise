@@ -731,14 +731,14 @@ function Home() {
               </Link>
 
               <a
-                href="mailto:shivank152@gmail.com"
+                href="mailto:shivank152p@gmail.com"
                 className="cta-email"
               >
                 <span className="material-symbols-outlined">
                   mail
                 </span>
 
-                shivank152@gmail.com
+                shivank152p@gmail.com
               </a>
 
             </div>
