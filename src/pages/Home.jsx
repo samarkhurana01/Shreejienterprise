@@ -54,7 +54,7 @@ function Home() {
     },
     {
       icon: "local_shipping",
-      title: "Loading & Unloading",
+      title: "Loading & Unloading Workers",
     },
     {
       icon: "cleaning_services",
@@ -83,13 +83,13 @@ function Home() {
       icon: "construction",
       title: "Construction",
       description:
-        "Skilled and unskilled workforce for residential, commercial and large-scale construction projects.",
+        "Skilled and unskilled workforce for residential, commercial and large-scale construction projects in Kundli and Sonipat.",
     },
     {
       icon: "factory",
       title: "Industrial",
       description:
-        "Reliable manpower for factories, plants, production units and industrial operations.",
+        "Reliable industrial manpower for factories, plants, production units and manufacturing operations in Kundli and Sonipat.",
     },
     {
       icon: "warehouse",
@@ -101,7 +101,7 @@ function Home() {
       icon: "apartment",
       title: "Infrastructure",
       description:
-        "Manpower support for infrastructure development and major civil projects.",
+        "Manpower support for infrastructure development, civil works and major projects.",
     },
     {
       icon: "business",
@@ -171,30 +171,36 @@ function Home() {
         }}
         aria-labelledby="home-hero-title"
       >
-        <div className="hero-overlay"></div>
+        <div className="hero-background" />
+
+        <div className="hero-overlay" />
 
         <div className="hero-inner">
           <div className="hero-content">
 
             <div className="hero-badge">
-              <span className="material-symbols-outlined">
+              <span
+                className="material-symbols-outlined"
+                aria-hidden="true"
+              >
                 verified
               </span>
 
               <span>
-                Trusted Manpower Supply Partner in Kundli &amp; Delhi NCR
+                Manpower & Labour Contractor in Kundli, Sonipat
               </span>
             </div>
 
             <h1 id="home-hero-title">
-              Manpower &amp; Labour Contractor in Kundli, Sonipat
+              Manpower & Labour Contractor in Kundli, Sonipat
             </h1>
 
             <p>
-              ShreeJi Enterprises provides reliable skilled, semi-skilled
-              and unskilled manpower for industrial, commercial,
-              construction, warehousing and infrastructure requirements
-              across Kundli, Sonipat and Delhi NCR.
+              ShreeJi Enterprises is a manpower and labour contractor
+              in Kundli, Sonipat, providing reliable skilled,
+              semi-skilled and unskilled workforce for industrial,
+              commercial, construction, warehousing and infrastructure
+              requirements.
             </p>
 
             <div className="hero-buttons">
@@ -206,7 +212,10 @@ function Home() {
               >
                 <span>Get Manpower</span>
 
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   arrow_forward
                 </span>
               </Link>
@@ -216,7 +225,10 @@ function Home() {
                 className="button button-outline"
                 aria-label="Call ShreeJi Enterprises"
               >
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   call
                 </span>
 
@@ -255,15 +267,16 @@ function Home() {
                 Reliable Manpower Contractor in Kundli, Sonipat
               </h2>
 
-              <div className="orange-line"></div>
+              <div className="orange-line" />
 
               <p>
                 ShreeJi Enterprises provides dependable skilled,
                 semi-skilled and unskilled manpower for construction,
                 industrial, commercial, warehousing and infrastructure
-                requirements. Based in Kundli, Sonipat, we support
-                businesses with practical workforce solutions for
-                project and operational needs across Delhi NCR.
+                requirements. Based in Kundli, Sonipat, we provide
+                practical workforce and labour contractor solutions
+                for businesses, factories, warehouses and projects
+                across the local area and nearby Delhi NCR locations.
               </p>
 
             </div>
@@ -315,15 +328,15 @@ function Home() {
             </span>
 
             <h2 id="skilled-heading">
-              Skilled Manpower &amp; Labour Categories
+              Skilled Manpower & Labour Categories in Kundli
             </h2>
 
-            <div className="orange-line center-line"></div>
+            <div className="orange-line center-line" />
 
             <p>
               Experienced workers and technical professionals for
-              specialized project and operational requirements in
-              Kundli, Sonipat and Delhi NCR.
+              specialized construction, industrial and operational
+              requirements in Kundli, Sonipat and nearby areas.
             </p>
 
           </div>
@@ -399,17 +412,17 @@ function Home() {
               </span>
 
               <h2 id="general-heading">
-                Unskilled &amp; Support Workforce
+                Unskilled & Support Workforce in Kundli
               </h2>
 
-              <div className="orange-line"></div>
+              <div className="orange-line" />
 
             </div>
 
             <p>
-              Flexible workforce for site operations, logistics,
-              warehousing, support services and general labour
-              requirements across Kundli, Sonipat and Delhi NCR.
+              Flexible workforce for construction sites, factories,
+              logistics, warehouses, support services and general
+              labour requirements across Kundli and Sonipat.
             </p>
 
           </div>
@@ -449,7 +462,7 @@ function Home() {
               </strong>
 
               <span>
-                Tell us your requirement and workforce needs.
+                Tell us your workforce requirement in Kundli or Sonipat.
               </span>
 
             </div>
@@ -491,16 +504,15 @@ function Home() {
             </span>
 
             <h2 id="industries-heading">
-              Manpower Supply for Multiple Industries
+              Industrial & Commercial Manpower Supply in Kundli
             </h2>
 
-            <div className="orange-line center-line"></div>
+            <div className="orange-line center-line" />
 
             <p>
-              Workforce solutions for businesses and projects across
-              construction, industrial, commercial, infrastructure,
-              warehousing and logistics sectors in Kundli, Sonipat
-              and Delhi NCR.
+              Workforce solutions for construction, factories,
+              manufacturing, infrastructure, warehousing, logistics
+              and commercial operations in Kundli and Sonipat.
             </p>
 
           </div>
@@ -569,7 +581,7 @@ function Home() {
 
               <img
                 src={heroImage}
-                alt="Skilled and unskilled manpower working on an industrial project"
+                alt="Manpower workforce working on a construction and industrial project in Kundli"
                 loading="lazy"
               />
 
@@ -597,18 +609,18 @@ function Home() {
               </span>
 
               <h2 id="why-heading">
-                A Reliable Workforce Partner for Kundli &amp; Delhi NCR
+                A Reliable Workforce Partner in Kundli & Sonipat
               </h2>
 
-              <div className="orange-line"></div>
+              <div className="orange-line" />
 
               <p>
                 From individual skilled workers to larger workforce
                 requirements, ShreeJi Enterprises focuses on practical
                 manpower solutions that fit your project, site and
                 operational needs. We serve businesses looking for
-                manpower and labour contractor services in Kundli,
-                Sonipat and nearby Delhi NCR areas.
+                manpower supply and labour contractor services in
+                Kundli, Sonipat and nearby industrial areas.
               </p>
 
               <div className="benefits-grid">
@@ -672,16 +684,16 @@ function Home() {
               </span>
 
               <h2 id="areas-heading">
-                Manpower Supply in Kundli, Sonipat &amp; Delhi NCR
+                Manpower Supply in Kundli & Sonipat
               </h2>
 
-              <div className="orange-line"></div>
+              <div className="orange-line" />
 
               <p>
                 ShreeJi Enterprises is based in Kundli, Sonipat and
-                provides manpower and labour contractor services for
-                businesses and projects across Delhi NCR and nearby
-                industrial areas.
+                provides manpower supply and labour contractor services
+                for businesses, factories, warehouses and projects
+                across Kundli, Sonipat and nearby industrial areas.
               </p>
 
               <div className="areas-list">
@@ -714,12 +726,12 @@ function Home() {
             <div className="areas-map">
 
               <iframe
-                title="ShreeJi Enterprises location in Kundli, Sonipat, Haryana"
+                title="ShreeJi Enterprises manpower contractor location in Kundli, Sonipat, Haryana"
                 src="https://www.google.com/maps?q=Dahiya+Complex,+B-12,+near+Shree+Makhan+Bhog,+Kundli,+Sonipat,+Haryana+131028,+India&output=embed"
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              />
 
               <div className="map-overlay">
 
@@ -737,9 +749,8 @@ function Home() {
                   </strong>
 
                   <span>
-                    Serving manpower requirements across Kundli,
-                    Sonipat, Delhi, Noida, Greater Noida, Gurgaon,
-                    Ghaziabad &amp; Faridabad.
+                    Dahiya Complex, B-12, Near Shree Makhan Bhog,
+                    Kundli, Sonipat, Haryana 131028.
                   </span>
 
                 </div>
@@ -780,7 +791,7 @@ function Home() {
                 Share your workforce requirement with ShreeJi
                 Enterprises and let us help you find the right
                 skilled, semi-skilled or unskilled manpower for
-                your project.
+                your project in Kundli or Sonipat.
               </p>
 
             </div>
