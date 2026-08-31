@@ -1,13 +1,14 @@
+import { Link } from "react-router-dom";
 import "./LabourCategories.css";
 
 const categories = [
   {
     id: "01",
     type: "SKILLED MANPOWER",
-    title: "Skilled Workforce",
+    title: "Skilled Manpower in Kundli",
     icon: "engineering",
     description:
-      "Experienced manpower for technical, industrial, machinery and project-specific requirements.",
+      "Experienced skilled manpower for technical, industrial, machinery and project-specific requirements in Kundli and Sonipat.",
     workers: [
       {
         icon: "precision_manufacturing",
@@ -17,37 +18,37 @@ const categories = [
       {
         icon: "electrical_services",
         name: "Electricians",
-        text: "Electrical workforce for industrial and commercial work.",
+        text: "Electrical workforce for industrial, commercial and construction work.",
       },
       {
         icon: "construction",
         name: "Welders",
-        text: "Welding and fabrication workforce.",
+        text: "Skilled welding and fabrication workforce for industrial and site operations.",
       },
       {
         icon: "engineering",
         name: "Fitters",
-        text: "Skilled fitters for machinery and operational work.",
+        text: "Skilled fitters for machinery, equipment and operational work.",
       },
       {
         icon: "build",
         name: "Technicians",
-        text: "Technical manpower for maintenance and operations.",
+        text: "Technical manpower for maintenance and industrial operations.",
       },
       {
         icon: "carpenter",
         name: "Carpenters",
-        text: "Skilled carpentry workforce for project requirements.",
+        text: "Skilled carpentry workforce for construction and project requirements.",
       },
       {
         icon: "foundation",
         name: "Masons",
-        text: "Masonry workforce for construction requirements.",
+        text: "Masonry workforce for residential, commercial and construction requirements.",
       },
       {
         icon: "plumbing",
         name: "Plumbers",
-        text: "Plumbing workforce for site and commercial work.",
+        text: "Plumbing workforce for construction, site and commercial work.",
       },
     ],
   },
@@ -55,40 +56,40 @@ const categories = [
   {
     id: "02",
     type: "SEMI-SKILLED MANPOWER",
-    title: "Semi-Skilled Workforce",
+    title: "Semi-Skilled Manpower in Kundli",
     icon: "handyman",
     description:
-      "Workforce with practical experience for assisting technical teams and operational activities.",
+      "Practical and experienced workforce for assisting technical teams, production activities and operational requirements in Kundli and Sonipat.",
     workers: [
       {
         icon: "precision_manufacturing",
         name: "Assistant Operators",
-        text: "Support workforce for machine operation.",
+        text: "Support workforce for machine and production operations.",
       },
       {
         icon: "build",
         name: "Machine Helpers",
-        text: "Helpers for machinery and production activities.",
+        text: "Helpers for machinery, production and industrial activities.",
       },
       {
         icon: "engineering",
         name: "Maintenance Helpers",
-        text: "Support workforce for maintenance teams.",
+        text: "Support workforce for maintenance and technical teams.",
       },
       {
         icon: "construction",
         name: "Fabrication Helpers",
-        text: "Helpers for fabrication and workshop activities.",
+        text: "Helpers for fabrication, workshop and site activities.",
       },
       {
         icon: "warehouse",
         name: "Warehouse Assistants",
-        text: "Operational support for warehouse activities.",
+        text: "Operational support workforce for warehouse activities.",
       },
       {
         icon: "groups",
         name: "Site Assistants",
-        text: "General site support for ongoing operations.",
+        text: "General site support for ongoing project operations.",
       },
     ],
   },
@@ -96,45 +97,45 @@ const categories = [
   {
     id: "03",
     type: "UNSKILLED MANPOWER",
-    title: "General Workforce",
+    title: "Unskilled & General Manpower in Kundli",
     icon: "groups",
     description:
-      "Reliable general workforce for logistics, material handling, site and day-to-day operational requirements.",
+      "Reliable general workforce for logistics, material handling, construction sites, warehouses and day-to-day operational requirements.",
     workers: [
       {
         icon: "groups",
         name: "General Labour",
-        text: "General workforce for operational requirements.",
+        text: "General workforce for industrial, commercial and operational requirements.",
       },
       {
         icon: "person",
         name: "General Helpers",
-        text: "Helpers for different workplace activities.",
+        text: "Helpers for different workplace and project activities.",
       },
       {
         icon: "local_shipping",
         name: "Loading Workers",
-        text: "Workforce for loading and material movement.",
+        text: "Workforce for loading and material movement activities.",
       },
       {
         icon: "move_down",
         name: "Unloading Workers",
-        text: "Workforce for unloading and handling activities.",
+        text: "Workforce for unloading and material handling activities.",
       },
       {
         icon: "inventory_2",
         name: "Packing Workers",
-        text: "Manpower for packing and dispatch activities.",
+        text: "Manpower for packing, dispatch and warehouse activities.",
       },
       {
         icon: "sort",
         name: "Sorting Workers",
-        text: "Workforce for sorting and segregation activities.",
+        text: "Workforce for sorting and material segregation activities.",
       },
       {
         icon: "inventory",
         name: "Material Handlers",
-        text: "General workforce for material handling.",
+        text: "General workforce for material handling and movement.",
       },
     ],
   },
@@ -142,30 +143,30 @@ const categories = [
   {
     id: "04",
     type: "SUPPORT MANPOWER",
-    title: "Facility & Support Workforce",
+    title: "Facility & Support Workforce in Kundli",
     icon: "support_agent",
     description:
-      "Support manpower for facility operations, housekeeping, horticulture and utility requirements.",
+      "Support manpower for facility operations, housekeeping, horticulture, cleaning and utility requirements in Kundli and Sonipat.",
     workers: [
       {
         icon: "cleaning_services",
         name: "Housekeeping Staff",
-        text: "Workforce for cleaning and housekeeping activities.",
+        text: "Workforce for cleaning, housekeeping and facility activities.",
       },
       {
         icon: "yard",
         name: "Horticulture Workers",
-        text: "Workforce for gardening and outdoor maintenance.",
+        text: "Workforce for gardening, landscaping and outdoor maintenance.",
       },
       {
         icon: "home_work",
         name: "Utility Workers",
-        text: "General support for facility operations.",
+        text: "General support workforce for facility operations.",
       },
       {
         icon: "business",
         name: "Facility Support",
-        text: "Workforce for day-to-day facility requirements.",
+        text: "Workforce for day-to-day facility and operational requirements.",
       },
     ],
   },
@@ -175,9 +176,14 @@ function LabourCategories() {
   return (
     <main className="labour-page">
 
-      {/* HERO */}
+      {/* =====================================================
+          HERO
+      ===================================================== */}
 
-      <section className="labour-hero">
+      <section
+        className="labour-hero"
+        aria-labelledby="labour-hero-title"
+      >
 
         <div className="labour-hero-bg" />
 
@@ -186,28 +192,32 @@ function LabourCategories() {
         <div className="container labour-hero-inner">
 
           <span className="labour-hero-eyebrow">
-            LABOUR CATEGORIES
+            MANPOWER CATEGORIES IN KUNDLI
           </span>
 
-          <h1>
-            The Right Workforce
-            <span>for Every Requirement</span>
+          <h1 id="labour-hero-title">
+            Skilled &amp; Unskilled Manpower
+            <span> in Kundli, Sonipat</span>
           </h1>
 
           <p>
-            ShreeJi Enterprises provides skilled,
-            semi-skilled, unskilled and support
-            manpower for different business and
-            operational requirements.
+            ShreeJi Enterprises provides skilled, semi-skilled,
+            unskilled and support manpower for industrial,
+            construction, warehouse, commercial and operational
+            requirements in Kundli, Sonipat and nearby areas.
           </p>
 
           <a
             href="#categories"
             className="labour-hero-button"
+            aria-label="Explore skilled and unskilled manpower categories"
           >
             Explore Categories
 
-            <span className="material-symbols-outlined">
+            <span
+              className="material-symbols-outlined"
+              aria-hidden="true"
+            >
               arrow_downward
             </span>
           </a>
@@ -217,7 +227,9 @@ function LabourCategories() {
       </section>
 
 
-      {/* INTRO */}
+      {/* =====================================================
+          INTRO
+      ===================================================== */}
 
       <section className="labour-intro">
 
@@ -232,8 +244,7 @@ function LabourCategories() {
               </span>
 
               <h2>
-                Manpower Categories
-                for Different Needs
+                Skilled, Semi-Skilled &amp; Unskilled Manpower in Kundli
               </h2>
 
               <div className="orange-line" />
@@ -241,11 +252,12 @@ function LabourCategories() {
             </div>
 
             <p>
-              From machine operators and technical
-              workers to general labour, loading,
-              packing, housekeeping and horticulture
-              workforce, ShreeJi Enterprises supports
-              different manpower requirements.
+              ShreeJi Enterprises supplies different workforce
+              categories according to business and project
+              requirements. From machine operators and technical
+              workers to general labour, loading, packing,
+              housekeeping and facility support workforce, we
+              support businesses across Kundli and Sonipat.
             </p>
 
           </div>
@@ -255,9 +267,14 @@ function LabourCategories() {
       </section>
 
 
-      {/* CATEGORY NAV */}
+      {/* =====================================================
+          CATEGORY NAV
+      ===================================================== */}
 
-      <section className="category-overview">
+      <section
+        className="category-overview"
+        aria-label="Manpower categories"
+      >
 
         <div className="container">
 
@@ -268,7 +285,10 @@ function LabourCategories() {
                 01
               </span>
 
-              <span className="material-symbols-outlined">
+              <span
+                className="material-symbols-outlined"
+                aria-hidden="true"
+              >
                 engineering
               </span>
 
@@ -286,7 +306,10 @@ function LabourCategories() {
                 02
               </span>
 
-              <span className="material-symbols-outlined">
+              <span
+                className="material-symbols-outlined"
+                aria-hidden="true"
+              >
                 handyman
               </span>
 
@@ -304,7 +327,10 @@ function LabourCategories() {
                 03
               </span>
 
-              <span className="material-symbols-outlined">
+              <span
+                className="material-symbols-outlined"
+                aria-hidden="true"
+              >
                 groups
               </span>
 
@@ -322,7 +348,10 @@ function LabourCategories() {
                 04
               </span>
 
-              <span className="material-symbols-outlined">
+              <span
+                className="material-symbols-outlined"
+                aria-hidden="true"
+              >
                 support_agent
               </span>
 
@@ -342,7 +371,9 @@ function LabourCategories() {
       </section>
 
 
-      {/* CATEGORIES */}
+      {/* =====================================================
+          CATEGORIES
+      ===================================================== */}
 
       <section
         className="categories-section"
@@ -367,6 +398,7 @@ function LabourCategories() {
                 className="labour-category"
                 id={sectionId}
                 key={category.id}
+                aria-labelledby={`${sectionId}-heading`}
               >
 
                 <div className="category-heading">
@@ -379,7 +411,10 @@ function LabourCategories() {
 
                     <div className="category-heading-icon">
 
-                      <span className="material-symbols-outlined">
+                      <span
+                        className="material-symbols-outlined"
+                        aria-hidden="true"
+                      >
                         {category.icon}
                       </span>
 
@@ -391,7 +426,7 @@ function LabourCategories() {
                         {category.type}
                       </span>
 
-                      <h2>
+                      <h2 id={`${sectionId}-heading`}>
                         {category.title}
                       </h2>
 
@@ -418,13 +453,19 @@ function LabourCategories() {
 
                         <div className="worker-icon">
 
-                          <span className="material-symbols-outlined">
+                          <span
+                            className="material-symbols-outlined"
+                            aria-hidden="true"
+                          >
                             {worker.icon}
                           </span>
 
                         </div>
 
-                        <span className="worker-arrow material-symbols-outlined">
+                        <span
+                          className="worker-arrow material-symbols-outlined"
+                          aria-hidden="true"
+                        >
                           arrow_forward
                         </span>
 
@@ -438,9 +479,12 @@ function LabourCategories() {
                         {worker.text}
                       </p>
 
-                      <a href="#contact">
+                      <Link
+                        to="/contact"
+                        aria-label={`Request ${worker.name} workforce`}
+                      >
                         Request Workforce
-                      </a>
+                      </Link>
 
                     </article>
                   ))}
@@ -456,7 +500,9 @@ function LabourCategories() {
       </section>
 
 
-      {/* REQUIREMENT CTA */}
+      {/* =====================================================
+          REQUIREMENT CTA
+      ===================================================== */}
 
       <section className="requirement-section">
 
@@ -471,41 +517,48 @@ function LabourCategories() {
               </span>
 
               <h2>
-                Tell Us Your Workforce Requirement
+                Need Manpower Not Listed Above?
               </h2>
 
               <div className="orange-line" />
 
               <p>
-                If you don't see your required workforce
-                category above, contact us with your
-                requirement and workforce details.
+                If you do not see your required workforce category,
+                contact ShreeJi Enterprises with your requirement.
+                We provide manpower solutions for businesses and
+                projects in Kundli, Sonipat and nearby areas.
               </p>
 
             </div>
 
             <div className="requirement-actions">
 
-              <a
-                href="mailto:shreejienterprises@gmail.com"
+              <Link
+                to="/contact"
                 className="requirement-button"
               >
                 Request Manpower
 
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   arrow_forward
                 </span>
-              </a>
+              </Link>
 
               <a
-                href="mailto:shreejienterprises@gmail.com"
+                href="tel:+917379433305"
                 className="requirement-contact"
               >
-                <span className="material-symbols-outlined">
-                  mail
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
+                  call
                 </span>
 
-                Contact ShreeJi Enterprises
+                Call ShreeJi Enterprises
               </a>
 
             </div>
@@ -517,7 +570,9 @@ function LabourCategories() {
       </section>
 
 
-      {/* FOOTER CTA */}
+      {/* =====================================================
+          FINAL CTA
+      ===================================================== */}
 
       <section
         className="labour-final-cta"
@@ -535,22 +590,25 @@ function LabourCategories() {
               </span>
 
               <h2>
-                Reliable Workforce.
+                Reliable Manpower.
                 Ready for Your Requirement.
               </h2>
 
             </div>
 
-            <a
-              href="mailto:shreejienterprises@gmail.com"
+            <Link
+              to="/contact"
               className="final-cta-button"
             >
               Get in Touch
 
-              <span className="material-symbols-outlined">
+              <span
+                className="material-symbols-outlined"
+                aria-hidden="true"
+              >
                 arrow_forward
               </span>
-            </a>
+            </Link>
 
           </div>
 
