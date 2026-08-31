@@ -1,25 +1,26 @@
+import { Link } from "react-router-dom";
 import "./About.css";
 
 const skilledServices = [
   {
     icon: "precision_manufacturing",
     title: "Machine Operators",
-    text: "Workforce for machinery, production and industrial operations.",
+    text: "Workforce for machinery, production and industrial operations in Kundli and Sonipat.",
   },
   {
     icon: "electrical_services",
     title: "Electricians",
-    text: "Skilled electrical manpower for commercial and industrial requirements.",
+    text: "Skilled electrical manpower for commercial, construction and industrial requirements.",
   },
   {
     icon: "construction",
     title: "Welders",
-    text: "Experienced manpower for welding, fabrication and site operations.",
+    text: "Experienced manpower for welding, fabrication and industrial site operations.",
   },
   {
     icon: "engineering",
     title: "Fitters & Technicians",
-    text: "Technical workforce for equipment, maintenance and operational needs.",
+    text: "Technical workforce for equipment, maintenance and industrial operational needs.",
   },
 ];
 
@@ -109,7 +110,10 @@ function About() {
           HERO
       ===================================================== */}
 
-      <section className="about-hero">
+      <section
+        className="about-hero"
+        aria-labelledby="about-hero-title"
+      >
 
         <div className="about-hero-background" />
 
@@ -123,15 +127,16 @@ function About() {
               ABOUT SHREEJI ENTERPRISES
             </span>
 
-            <h1>
-              Connecting Businesses
-              <span> With Reliable Workforce</span>
+            <h1 id="about-hero-title">
+              Manpower Contractor
+              <span> in Kundli, Sonipat</span>
             </h1>
 
             <p>
-              Skilled and unskilled manpower solutions for
-              industrial, commercial, construction,
-              warehousing and operational requirements.
+              ShreeJi Enterprises provides skilled, semi-skilled
+              and unskilled manpower solutions for industrial,
+              commercial, construction, warehousing and operational
+              requirements in Kundli, Sonipat and nearby areas.
             </p>
 
           </div>
@@ -160,35 +165,33 @@ function About() {
               </span>
 
               <h2>
-                A Workforce Partner
+                A Manpower Partner
                 Built Around Your Needs
               </h2>
 
               <div className="orange-line" />
 
               <p>
-                ShreeJi Enterprises provides skilled and
-                unskilled manpower solutions for businesses
-                and operational requirements across
-                different sectors.
+                ShreeJi Enterprises is a manpower and labour
+                contractor based in Kundli, Sonipat, providing
+                workforce solutions for businesses, factories,
+                construction projects, warehouses and commercial
+                operations.
               </p>
 
               <p>
-                Our manpower services cover both skilled
-                workforce requirements, such as machine
-                operators and technical trades, and general
-                workforce requirements including loading,
-                unloading, packing, sorting, housekeeping
-                and horticulture.
+                Our manpower services cover skilled workforce
+                requirements such as machine operators, electricians,
+                welders, fitters and technicians, along with general
+                and unskilled workforce for loading, unloading,
+                packing, sorting, housekeeping and horticulture.
               </p>
 
               <p>
-                Whether you require technical manpower for
-                industrial operations or general workers for
-                day-to-day activities, our approach is
-                focused on understanding the requirement
-                and providing an appropriate workforce
-                solution.
+                We work with businesses that need dependable
+                manpower support in Kundli and Sonipat, with
+                workforce solutions that can also support nearby
+                industrial and commercial areas.
               </p>
 
             </div>
@@ -200,13 +203,17 @@ function About() {
 
               <img
                 src="/images/workforce.png"
-                alt="Industrial workforce at work"
+                alt="Workforce providing manpower support for industrial operations in Kundli, Sonipat"
+                loading="lazy"
               />
 
               <div className="intro-image-card">
 
                 <div className="intro-image-card-icon">
-                  <span className="material-symbols-outlined">
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                  >
                     groups
                   </span>
                 </div>
@@ -217,7 +224,7 @@ function About() {
                   </strong>
 
                   <span>
-                    Manpower Solutions
+                    Manpower Solutions in Kundli
                   </span>
                 </div>
 
@@ -236,7 +243,10 @@ function About() {
           WHAT WE PROVIDE
       ===================================================== */}
 
-      <section className="provide-section">
+      <section
+        className="provide-section"
+        aria-labelledby="provide-heading"
+      >
 
         <div className="container">
 
@@ -246,17 +256,17 @@ function About() {
               WHAT WE PROVIDE
             </span>
 
-            <h2>
-              Workforce for Different
-              Operational Requirements
+            <h2 id="provide-heading">
+              Skilled &amp; Unskilled Manpower in Kundli
             </h2>
 
             <div className="orange-line center-line" />
 
             <p>
-              Our manpower solutions cover skilled,
-              technical, general and operational
-              workforce requirements.
+              Our manpower supply services cover skilled,
+              technical, general and operational workforce
+              requirements for businesses in Kundli, Sonipat
+              and nearby areas.
             </p>
 
           </div>
@@ -271,7 +281,10 @@ function About() {
               <div className="provide-header">
 
                 <div className="provide-header-icon">
-                  <span className="material-symbols-outlined">
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                  >
                     engineering
                   </span>
                 </div>
@@ -287,9 +300,9 @@ function About() {
               </div>
 
               <p className="provide-description">
-                Skilled workforce for technical,
-                machinery, maintenance and project
-                requirements.
+                Skilled workforce for technical, machinery,
+                maintenance and industrial project requirements
+                in Kundli and Sonipat.
               </p>
 
               <div className="provide-list">
@@ -302,7 +315,10 @@ function About() {
 
                     <div className="provide-item-icon">
 
-                      <span className="material-symbols-outlined">
+                      <span
+                        className="material-symbols-outlined"
+                        aria-hidden="true"
+                      >
                         {service.icon}
                       </span>
 
@@ -336,7 +352,10 @@ function About() {
 
                 <div className="provide-header-icon orange-icon">
 
-                  <span className="material-symbols-outlined">
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                  >
                     groups
                   </span>
 
@@ -355,8 +374,8 @@ function About() {
               </div>
 
               <p className="provide-description">
-                General workforce for logistics,
-                facility, site and day-to-day
+                General workforce for logistics, warehouse,
+                facility, construction site and day-to-day
                 operational requirements.
               </p>
 
@@ -368,7 +387,10 @@ function About() {
                     key={service.title}
                   >
 
-                    <span className="material-symbols-outlined">
+                    <span
+                      className="material-symbols-outlined"
+                      aria-hidden="true"
+                    >
                       {service.icon}
                     </span>
 
@@ -383,13 +405,17 @@ function About() {
 
               <div className="general-note">
 
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   check_circle
                 </span>
 
                 <span>
-                  Additional general workforce can be
-                  arranged according to requirement.
+                  Additional general workforce can be arranged
+                  according to your project or operational
+                  requirement.
                 </span>
 
               </div>
@@ -407,7 +433,10 @@ function About() {
           OUR APPROACH
       ===================================================== */}
 
-      <section className="approach-section">
+      <section
+        className="approach-section"
+        aria-labelledby="approach-heading"
+      >
 
         <div className="container">
 
@@ -417,15 +446,16 @@ function About() {
               OUR APPROACH
             </span>
 
-            <h2>
+            <h2 id="approach-heading">
               Simple. Practical. Requirement-Focused.
             </h2>
 
             <div className="orange-line center-line" />
 
             <p>
-              We keep the manpower process straightforward
-              so businesses can focus on their operations.
+              We keep the manpower supply process straightforward
+              so businesses in Kundli and Sonipat can focus on
+              their operations.
             </p>
 
           </div>
@@ -445,7 +475,10 @@ function About() {
                     {item.number}
                   </span>
 
-                  <span className="material-symbols-outlined process-icon">
+                  <span
+                    className="material-symbols-outlined process-icon"
+                    aria-hidden="true"
+                  >
                     {item.icon}
                   </span>
 
@@ -473,7 +506,10 @@ function About() {
           WHY SHREEJI
       ===================================================== */}
 
-      <section className="why-about-section">
+      <section
+        className="why-about-section"
+        aria-labelledby="why-about-heading"
+      >
 
         <div className="container">
 
@@ -485,23 +521,29 @@ function About() {
 
               <img
                 src="/images/packaging.png"
-                alt="Industrial packaging and manpower operations"
+                alt="Packaging and warehouse manpower operations in Kundli, Sonipat"
+                loading="lazy"
               />
 
               <div className="why-image-overlay">
 
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   verified
                 </span>
 
                 <div>
+
                   <strong>
                     Workforce Solutions
                   </strong>
 
                   <span>
-                    Reliable support for business operations
+                    Reliable manpower support for business operations
                   </span>
+
                 </div>
 
               </div>
@@ -517,19 +559,18 @@ function About() {
                 WHY SHREEJI ENTERPRISES
               </span>
 
-              <h2>
-                One Partner for
-                Different Workforce Needs
+              <h2 id="why-about-heading">
+                Your Workforce Partner in Kundli &amp; Sonipat
               </h2>
 
               <div className="orange-line" />
 
               <p>
-                Businesses often need different categories
-                of manpower at different stages of their
-                operations. ShreeJi Enterprises focuses on
-                providing a broad workforce solution under
-                one roof.
+                Businesses often need different categories of
+                manpower at different stages of their operations.
+                ShreeJi Enterprises provides a broad workforce
+                solution for companies looking for a manpower
+                contractor in Kundli and Sonipat.
               </p>
 
               <div className="reason-list">
@@ -542,7 +583,10 @@ function About() {
 
                     <div className="reason-icon">
 
-                      <span className="material-symbols-outlined">
+                      <span
+                        className="material-symbols-outlined"
+                        aria-hidden="true"
+                      >
                         {reason.icon}
                       </span>
 
@@ -578,7 +622,10 @@ function About() {
           INDUSTRIES
       ===================================================== */}
 
-      <section className="about-industries-section">
+      <section
+        className="about-industries-section"
+        aria-labelledby="about-industries-heading"
+      >
 
         <div className="container">
 
@@ -590,9 +637,8 @@ function About() {
                 SECTORS WE SUPPORT
               </span>
 
-              <h2>
-                Workforce Across
-                Multiple Industries
+              <h2 id="about-industries-heading">
+                Workforce Across Kundli &amp; Sonipat Industries
               </h2>
 
               <div className="orange-line" />
@@ -600,9 +646,9 @@ function About() {
             </div>
 
             <p>
-              Our manpower solutions can support different
-              business environments and operational
-              requirements.
+              Our manpower supply solutions support different
+              business environments and operational requirements
+              across Kundli, Sonipat and nearby industrial areas.
             </p>
 
           </div>
@@ -624,7 +670,10 @@ function About() {
                   {industry}
                 </strong>
 
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   arrow_forward
                 </span>
 
@@ -642,7 +691,10 @@ function About() {
           CTA
       ===================================================== */}
 
-      <section className="about-cta">
+      <section
+        className="about-cta"
+        aria-labelledby="about-cta-heading"
+      >
 
         <div className="container">
 
@@ -654,37 +706,43 @@ function About() {
                 NEED WORKFORCE?
               </span>
 
-              <h2>
-                Let's Discuss Your
-                Manpower Requirement
+              <h2 id="about-cta-heading">
+                Looking for a Manpower Contractor in Kundli?
               </h2>
 
               <p>
-                Tell us what type of manpower you need
-                and we'll help you identify the right
-                workforce category.
+                Tell us what type of skilled, semi-skilled or
+                unskilled manpower you need in Kundli or Sonipat
+                and we'll help you identify the right workforce
+                category.
               </p>
 
             </div>
 
             <div className="about-cta-actions">
 
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="button button-orange"
               >
                 Request Manpower
 
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   arrow_forward
                 </span>
-              </a>
+              </Link>
 
               <a
                 href="mailto:shreejienterprises@gmail.com"
                 className="button button-outline"
               >
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   mail
                 </span>
 
