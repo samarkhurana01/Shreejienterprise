@@ -145,9 +145,11 @@ function Home() {
   ];
 
   const areas = [
+    "Kundli",
+    "Sonipat",
+    "Delhi NCR",
     "Noida",
     "Greater Noida",
-    "Delhi NCR",
     "Gurgaon",
     "Ghaziabad",
     "Faridabad",
@@ -167,6 +169,7 @@ function Home() {
         style={{
           "--hero-image": `url("${heroImage}")`,
         }}
+        aria-labelledby="home-hero-title"
       >
         <div className="hero-overlay"></div>
 
@@ -179,20 +182,19 @@ function Home() {
               </span>
 
               <span>
-                Trusted Manpower Supply Partner
+                Trusted Manpower Supply Partner in Kundli &amp; Delhi NCR
               </span>
             </div>
 
-            <h1>
-              Skilled &amp; Unskilled Manpower
-              <br />
-              for Every Industry
+            <h1 id="home-hero-title">
+              Manpower &amp; Labour Contractor in Kundli, Sonipat
             </h1>
 
             <p>
-              Reliable workforce solutions for industrial,
-              commercial, construction, warehousing and
-              infrastructure requirements.
+              ShreeJi Enterprises provides reliable skilled, semi-skilled
+              and unskilled manpower for industrial, commercial,
+              construction, warehousing and infrastructure requirements
+              across Kundli, Sonipat and Delhi NCR.
             </p>
 
             <div className="hero-buttons">
@@ -200,6 +202,7 @@ function Home() {
               <Link
                 to="/contact"
                 className="button button-orange"
+                aria-label="Request manpower from ShreeJi Enterprises"
               >
                 <span>Get Manpower</span>
 
@@ -211,6 +214,7 @@ function Home() {
               <a
                 href="tel:+917379433305"
                 className="button button-outline"
+                aria-label="Call ShreeJi Enterprises"
               >
                 <span className="material-symbols-outlined">
                   call
@@ -224,7 +228,7 @@ function Home() {
             <div className="hero-services">
               <span>Skilled Workforce</span>
               <span>Unskilled Workforce</span>
-              <span>All Sectors</span>
+              <span>Manpower Contractor</span>
             </div>
 
           </div>
@@ -248,18 +252,18 @@ function Home() {
               </span>
 
               <h2>
-                Manpower You Can Depend On
+                Reliable Manpower Contractor in Kundli, Sonipat
               </h2>
 
               <div className="orange-line"></div>
 
               <p>
-                ShreeJi Enterprises provides dependable skilled
-                and unskilled manpower for construction,
-                industrial, commercial, warehousing and
-                infrastructure requirements. We help businesses
-                find the right workforce for their operational
-                and project needs.
+                ShreeJi Enterprises provides dependable skilled,
+                semi-skilled and unskilled manpower for construction,
+                industrial, commercial, warehousing and infrastructure
+                requirements. Based in Kundli, Sonipat, we support
+                businesses with practical workforce solutions for
+                project and operational needs across Delhi NCR.
               </p>
 
             </div>
@@ -298,7 +302,10 @@ function Home() {
           SKILLED WORKFORCE
       ===================================================== */}
 
-      <section className="section skilled-section">
+      <section
+        className="section skilled-section"
+        aria-labelledby="skilled-heading"
+      >
         <div className="container">
 
           <div className="section-heading">
@@ -307,16 +314,16 @@ function Home() {
               SKILLED MANPOWER
             </span>
 
-            <h2>
-              Skilled Workforce Categories
+            <h2 id="skilled-heading">
+              Skilled Manpower &amp; Labour Categories
             </h2>
 
             <div className="orange-line center-line"></div>
 
             <p>
-              Experienced workers and technical professionals
-              for specialized project and operational
-              requirements.
+              Experienced workers and technical professionals for
+              specialized project and operational requirements in
+              Kundli, Sonipat and Delhi NCR.
             </p>
 
           </div>
@@ -330,7 +337,10 @@ function Home() {
               >
 
                 <div className="service-icon">
-                  <span className="material-symbols-outlined">
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                  >
                     {worker.icon}
                   </span>
                 </div>
@@ -347,10 +357,16 @@ function Home() {
 
                 </div>
 
-                <Link to="/labour-categories">
+                <Link
+                  to="/labour-categories"
+                  aria-label={`View ${worker.title} manpower category`}
+                >
                   View Category
 
-                  <span className="material-symbols-outlined">
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                  >
                     arrow_forward
                   </span>
                 </Link>
@@ -368,7 +384,10 @@ function Home() {
           GENERAL / UNSKILLED
       ===================================================== */}
 
-      <section className="section general-section">
+      <section
+        className="section general-section"
+        aria-labelledby="general-heading"
+      >
         <div className="container">
 
           <div className="general-header">
@@ -379,7 +398,7 @@ function Home() {
                 GENERAL MANPOWER
               </span>
 
-              <h2>
+              <h2 id="general-heading">
                 Unskilled &amp; Support Workforce
               </h2>
 
@@ -388,9 +407,9 @@ function Home() {
             </div>
 
             <p>
-              Flexible workforce for site operations,
-              logistics, warehousing, support services and
-              general labour requirements.
+              Flexible workforce for site operations, logistics,
+              warehousing, support services and general labour
+              requirements across Kundli, Sonipat and Delhi NCR.
             </p>
 
           </div>
@@ -404,7 +423,10 @@ function Home() {
               >
 
                 <div className="general-icon">
-                  <span className="material-symbols-outlined">
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                  >
                     {worker.icon}
                   </span>
                 </div>
@@ -421,6 +443,7 @@ function Home() {
           <div className="general-cta">
 
             <div>
+
               <strong>
                 Need manpower for your project?
               </strong>
@@ -428,6 +451,7 @@ function Home() {
               <span>
                 Tell us your requirement and workforce needs.
               </span>
+
             </div>
 
             <Link
@@ -436,7 +460,10 @@ function Home() {
             >
               Request Manpower
 
-              <span className="material-symbols-outlined">
+              <span
+                className="material-symbols-outlined"
+                aria-hidden="true"
+              >
                 arrow_forward
               </span>
             </Link>
@@ -451,7 +478,10 @@ function Home() {
           INDUSTRIES
       ===================================================== */}
 
-      <section className="section industries-section">
+      <section
+        className="section industries-section"
+        aria-labelledby="industries-heading"
+      >
         <div className="container">
 
           <div className="section-heading">
@@ -460,16 +490,17 @@ function Home() {
               INDUSTRIES WE SERVE
             </span>
 
-            <h2>
-              Manpower Across Multiple Industries
+            <h2 id="industries-heading">
+              Manpower Supply for Multiple Industries
             </h2>
 
             <div className="orange-line center-line"></div>
 
             <p>
-              Workforce solutions for businesses and projects
-              across construction, industrial, commercial,
-              infrastructure and logistics sectors.
+              Workforce solutions for businesses and projects across
+              construction, industrial, commercial, infrastructure,
+              warehousing and logistics sectors in Kundli, Sonipat
+              and Delhi NCR.
             </p>
 
           </div>
@@ -483,7 +514,10 @@ function Home() {
               >
 
                 <div className="industry-icon">
-                  <span className="material-symbols-outlined">
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                  >
                     {industry.icon}
                   </span>
                 </div>
@@ -496,10 +530,16 @@ function Home() {
                   {industry.description}
                 </p>
 
-                <Link to="/industries-served">
+                <Link
+                  to="/industries-served"
+                  aria-label={`Explore ${industry.title} manpower services`}
+                >
                   Explore Industry
 
-                  <span className="material-symbols-outlined">
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                  >
                     arrow_forward
                   </span>
                 </Link>
@@ -517,7 +557,10 @@ function Home() {
           WHY SHREEJI
       ===================================================== */}
 
-      <section className="section why-section">
+      <section
+        className="section why-section"
+        aria-labelledby="why-heading"
+      >
         <div className="container">
 
           <div className="why-grid">
@@ -526,12 +569,16 @@ function Home() {
 
               <img
                 src={heroImage}
-                alt="ShreeJi Enterprises manpower workforce"
+                alt="Skilled and unskilled manpower working on an industrial project"
+                loading="lazy"
               />
 
               <div className="image-label">
 
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   verified
                 </span>
 
@@ -549,17 +596,19 @@ function Home() {
                 WHY SHREEJI ENTERPRISES
               </span>
 
-              <h2>
-                A Workforce Partner Built Around Your Requirements
+              <h2 id="why-heading">
+                A Reliable Workforce Partner for Kundli &amp; Delhi NCR
               </h2>
 
               <div className="orange-line"></div>
 
               <p>
-                From individual skilled workers to larger
-                workforce requirements, we focus on providing
-                practical manpower solutions that fit your
-                project, site and operational needs.
+                From individual skilled workers to larger workforce
+                requirements, ShreeJi Enterprises focuses on practical
+                manpower solutions that fit your project, site and
+                operational needs. We serve businesses looking for
+                manpower and labour contractor services in Kundli,
+                Sonipat and nearby Delhi NCR areas.
               </p>
 
               <div className="benefits-grid">
@@ -571,7 +620,10 @@ function Home() {
                   >
 
                     <div className="benefit-icon">
-                      <span className="material-symbols-outlined">
+                      <span
+                        className="material-symbols-outlined"
+                        aria-hidden="true"
+                      >
                         {benefit.icon}
                       </span>
                     </div>
@@ -605,7 +657,10 @@ function Home() {
           SERVICE AREAS
       ===================================================== */}
 
-      <section className="section areas-section">
+      <section
+        className="section areas-section"
+        aria-labelledby="areas-heading"
+      >
         <div className="container">
 
           <div className="areas-inner">
@@ -616,16 +671,17 @@ function Home() {
                 SERVICE AREAS
               </span>
 
-              <h2>
-                Manpower Supply Across North India
+              <h2 id="areas-heading">
+                Manpower Supply in Kundli, Sonipat &amp; Delhi NCR
               </h2>
 
               <div className="orange-line"></div>
 
               <p>
-                We support projects and businesses with
-                manpower requirements across Noida, Greater
-                Noida, Delhi NCR and surrounding regions.
+                ShreeJi Enterprises is based in Kundli, Sonipat and
+                provides manpower and labour contractor services for
+                businesses and projects across Delhi NCR and nearby
+                industrial areas.
               </p>
 
               <div className="areas-list">
@@ -635,7 +691,10 @@ function Home() {
                     className="area-tag"
                     key={area}
                   >
-                    <span className="material-symbols-outlined">
+                    <span
+                      className="material-symbols-outlined"
+                      aria-hidden="true"
+                    >
                       location_on
                     </span>
 
@@ -649,13 +708,13 @@ function Home() {
 
 
             {/* =================================================
-                DELHI NCR MAP
+                LOCATION MAP
             ================================================= */}
 
             <div className="areas-map">
 
               <iframe
-                title="Delhi NCR Map"
+                title="ShreeJi Enterprises location in Kundli, Sonipat, Haryana"
                 src="https://www.google.com/maps?q=Dahiya+Complex,+B-12,+near+Shree+Makhan+Bhog,+Kundli,+Sonipat,+Haryana+131028,+India&output=embed"
                 loading="lazy"
                 allowFullScreen
@@ -664,20 +723,25 @@ function Home() {
 
               <div className="map-overlay">
 
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   location_on
                 </span>
 
                 <div>
+
                   <strong>
-                    Delhi NCR
+                    Kundli, Sonipat
                   </strong>
 
                   <span>
-                    Serving manpower requirements across
-                    Delhi, Noida, Greater Noida, Gurgaon,
+                    Serving manpower requirements across Kundli,
+                    Sonipat, Delhi, Noida, Greater Noida, Gurgaon,
                     Ghaziabad &amp; Faridabad.
                   </span>
+
                 </div>
 
               </div>
@@ -694,7 +758,10 @@ function Home() {
           FINAL CTA
       ===================================================== */}
 
-      <section className="contact-cta">
+      <section
+        className="contact-cta"
+        aria-labelledby="cta-heading"
+      >
         <div className="container">
 
           <div className="cta-inner">
@@ -705,14 +772,15 @@ function Home() {
                 GET IN TOUCH
               </span>
 
-              <h2>
-                Looking for Reliable Manpower?
+              <h2 id="cta-heading">
+                Looking for a Manpower Contractor in Kundli?
               </h2>
 
               <p>
-                Share your workforce requirement with
-                ShreeJi Enterprises and let us help you find
-                the right manpower for your project.
+                Share your workforce requirement with ShreeJi
+                Enterprises and let us help you find the right
+                skilled, semi-skilled or unskilled manpower for
+                your project.
               </p>
 
             </div>
@@ -725,7 +793,10 @@ function Home() {
               >
                 Get Manpower
 
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   arrow_forward
                 </span>
               </Link>
@@ -734,7 +805,10 @@ function Home() {
                 href="mailto:shivank152p@gmail.com"
                 className="cta-email"
               >
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   mail
                 </span>
 
@@ -760,7 +834,10 @@ function Home() {
         rel="noopener noreferrer"
         aria-label="Contact ShreeJi Enterprises on WhatsApp"
       >
-        <span className="material-symbols-outlined">
+        <span
+          className="material-symbols-outlined"
+          aria-hidden="true"
+        >
           chat
         </span>
       </a>
