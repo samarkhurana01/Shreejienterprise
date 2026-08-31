@@ -5,9 +5,9 @@ const industries = [
   {
     number: "01",
     icon: "precision_manufacturing",
-    title: "Manufacturing",
+    title: "Manufacturing Manpower in Kundli",
     description:
-      "Reliable skilled and unskilled manpower for manufacturing plants, production units, assembly lines, packaging operations and general plant activities.",
+      "Reliable skilled and unskilled manpower for manufacturing plants, production units, assembly lines, packaging operations and general factory activities in Kundli and Sonipat.",
     workers: [
       "Machine Operators",
       "Production Helpers",
@@ -18,9 +18,9 @@ const industries = [
   {
     number: "02",
     icon: "warehouse",
-    title: "Warehousing & Logistics",
+    title: "Warehouse & Logistics Manpower",
     description:
-      "Flexible workforce solutions for warehouses, distribution centres and logistics operations where dependable manpower is essential for smooth daily operations.",
+      "Flexible workforce solutions for warehouses, distribution centres and logistics operations in Kundli and Sonipat where dependable manpower is essential for daily operations.",
     workers: [
       "Warehouse Helpers",
       "Loaders & Unloaders",
@@ -31,9 +31,9 @@ const industries = [
   {
     number: "03",
     icon: "construction",
-    title: "Construction",
+    title: "Construction Manpower",
     description:
-      "Experienced manpower for construction sites, residential projects, commercial developments and other building activities.",
+      "Experienced skilled and unskilled manpower for construction sites, residential projects, commercial developments and building activities in Kundli, Sonipat and nearby areas.",
     workers: [
       "Masons",
       "Carpenters",
@@ -44,9 +44,9 @@ const industries = [
   {
     number: "04",
     icon: "engineering",
-    title: "Infrastructure",
+    title: "Infrastructure Manpower",
     description:
-      "Workforce support for infrastructure projects requiring disciplined, reliable and project-ready manpower for demanding site environments.",
+      "Workforce support for infrastructure projects requiring disciplined, reliable and project-ready manpower for demanding site environments across Sonipat and nearby areas.",
     workers: [
       "Skilled Technicians",
       "Site Helpers",
@@ -57,9 +57,9 @@ const industries = [
   {
     number: "05",
     icon: "business_center",
-    title: "Commercial Operations",
+    title: "Commercial Operations Manpower",
     description:
-      "Manpower solutions for commercial establishments and business operations requiring dependable staff for day-to-day support functions.",
+      "Manpower solutions for commercial establishments and business operations requiring dependable staff for day-to-day support functions in Kundli and Sonipat.",
     workers: [
       "Support Staff",
       "Loading Staff",
@@ -70,9 +70,9 @@ const industries = [
   {
     number: "06",
     icon: "cleaning_services",
-    title: "Facility Operations",
+    title: "Facility Operations Manpower",
     description:
-      "Dedicated manpower for facility maintenance, housekeeping, cleaning, material movement and other essential operational requirements.",
+      "Dedicated manpower for facility maintenance, housekeeping, cleaning, material movement and other essential operational requirements in Kundli and surrounding areas.",
     workers: [
       "Housekeeping Staff",
       "Cleaning Workers",
@@ -123,39 +123,54 @@ function IndustriesServed() {
           HERO
       ===================================================== */}
 
-      <section className="industries-hero">
+      <section
+        className="industries-hero"
+        aria-labelledby="industries-hero-title"
+      >
+
         <div className="industries-container">
+
           <div className="industries-hero-content">
 
             <div className="industries-eyebrow">
-              <span className="material-symbols-outlined">
+
+              <span
+                className="material-symbols-outlined"
+                aria-hidden="true"
+              >
                 business
               </span>
 
-              Industries We Serve
+              Manpower Services in Kundli &amp; Sonipat
+
             </div>
 
-            <h1>
-              Workforce Solutions
+            <h1 id="industries-hero-title">
+              Industrial &amp; Commercial
               <br />
-              Across Multiple Industries
+              <span>Manpower Contractor in Kundli</span>
             </h1>
 
             <p>
               ShreeJi Enterprises provides dependable skilled,
-              unskilled, helper and supervisor manpower for
-              businesses, projects and operational requirements
-              across different industries.
+              semi-skilled, unskilled, helper and supervisor
+              manpower for manufacturing, warehousing,
+              construction, infrastructure and commercial
+              operations across Kundli, Sonipat and nearby areas.
             </p>
 
             <div className="industries-hero-actions">
+
               <Link
                 to="/contact"
                 className="industry-btn industry-btn-orange"
               >
                 Get Manpower
 
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   arrow_forward
                 </span>
               </Link>
@@ -163,17 +178,24 @@ function IndustriesServed() {
               <a
                 href="tel:+917379433305"
                 className="industry-btn industry-btn-outline"
+                aria-label="Call ShreeJi Enterprises"
               >
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   call
                 </span>
 
                 Call Now
               </a>
+
             </div>
 
           </div>
+
         </div>
+
       </section>
 
 
@@ -182,40 +204,46 @@ function IndustriesServed() {
       ===================================================== */}
 
       <section className="industries-intro">
+
         <div className="industries-container">
 
           <div className="industries-intro-grid">
 
             <div>
+
               <span className="section-label">
-                OUR REACH
+                INDUSTRIAL MANPOWER IN KUNDLI
               </span>
 
               <h2>
-                Manpower Built Around
-                Your Industry&apos;s Needs
+                Manpower Built Around Your Industry&apos;s Needs
               </h2>
+
             </div>
 
             <div>
+
               <p>
-                We are pleased to provide manpower solutions
-                according to the requirements of our valuable
-                clients across different business and industrial
-                environments.
+                ShreeJi Enterprises provides manpower supply
+                and labour contractor services for businesses
+                and industrial establishments in Kundli, Sonipat
+                and nearby areas.
               </p>
 
               <p>
                 Our workforce includes skilled and unskilled
-                workers, helpers, supervisors and other manpower
-                categories required for day-to-day operations,
-                production and project requirements.
+                workers, helpers, supervisors and support staff
+                required for production, warehouse operations,
+                construction projects and day-to-day business
+                activities.
               </p>
+
             </div>
 
           </div>
 
         </div>
+
       </section>
 
 
@@ -223,23 +251,30 @@ function IndustriesServed() {
           INDUSTRIES
       ===================================================== */}
 
-      <section className="industries-list">
+      <section
+        className="industries-list"
+        aria-labelledby="industries-list-heading"
+      >
+
         <div className="industries-container">
 
           <div className="industries-section-heading">
+
             <span className="section-label">
               SECTORS WE SUPPORT
             </span>
 
-            <h2>
-              Workforce Across Multiple Industries
+            <h2 id="industries-list-heading">
+              Manpower Supply for Industries in Kundli &amp; Sonipat
             </h2>
 
             <p>
-              Our manpower solutions can support different
-              business environments and operational
-              requirements.
+              Our manpower solutions support different business
+              environments and operational requirements across
+              the Kundli industrial area, Sonipat and nearby
+              locations.
             </p>
+
           </div>
 
 
@@ -258,9 +293,14 @@ function IndustriesServed() {
                   </span>
 
                   <div className="industry-icon">
-                    <span className="material-symbols-outlined">
+
+                    <span
+                      className="material-symbols-outlined"
+                      aria-hidden="true"
+                    >
                       {industry.icon}
                     </span>
+
                   </div>
 
                 </div>
@@ -284,11 +324,16 @@ function IndustriesServed() {
                   <ul>
                     {industry.workers.map((worker) => (
                       <li key={worker}>
-                        <span className="material-symbols-outlined">
+
+                        <span
+                          className="material-symbols-outlined"
+                          aria-hidden="true"
+                        >
                           check
                         </span>
 
                         {worker}
+
                       </li>
                     ))}
                   </ul>
@@ -299,10 +344,14 @@ function IndustriesServed() {
                 <Link
                   to="/contact"
                   className="industry-card-link"
+                  aria-label={`Enquire for ${industry.title}`}
                 >
                   Enquire Now
 
-                  <span className="material-symbols-outlined">
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                  >
                     arrow_forward
                   </span>
                 </Link>
@@ -317,7 +366,10 @@ function IndustriesServed() {
               CLIENTS WE HAVE SERVED
           ================================================= */}
 
-          <section className="clients-section">
+          <section
+            className="clients-section"
+            aria-labelledby="clients-heading"
+          >
 
             <div className="clients-section-heading">
 
@@ -325,7 +377,7 @@ function IndustriesServed() {
                 OUR CLIENTS
               </span>
 
-              <h2>
+              <h2 id="clients-heading">
                 Organisations We Have Served
               </h2>
 
@@ -351,9 +403,14 @@ function IndustriesServed() {
                   </div>
 
                   <div className="client-icon">
-                    <span className="material-symbols-outlined">
+
+                    <span
+                      className="material-symbols-outlined"
+                      aria-hidden="true"
+                    >
                       business
                     </span>
+
                   </div>
 
                   <div className="client-content">
@@ -376,6 +433,7 @@ function IndustriesServed() {
           </section>
 
         </div>
+
       </section>
 
 
@@ -384,6 +442,7 @@ function IndustriesServed() {
       ===================================================== */}
 
       <section className="workforce-section">
+
         <div className="industries-container">
 
           <div className="workforce-grid">
@@ -396,15 +455,15 @@ function IndustriesServed() {
 
               <h2>
                 Skilled, Unskilled,
-                Helpers & Supervisors
+                Helpers &amp; Supervisors
               </h2>
 
               <p>
-                We deal in different manpower categories as per
-                the requirements of our valuable clients. Our
-                workforce solutions can support industrial,
-                commercial, construction and operational
-                requirements.
+                We provide different manpower categories
+                according to the requirements of our valuable
+                clients. Our workforce solutions support
+                industrial, commercial, construction and
+                operational requirements in Kundli and Sonipat.
               </p>
 
               <Link
@@ -413,7 +472,10 @@ function IndustriesServed() {
               >
                 View Labour Categories
 
-                <span className="material-symbols-outlined">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                >
                   arrow_forward
                 </span>
               </Link>
@@ -426,12 +488,18 @@ function IndustriesServed() {
               <div className="workforce-type-card">
 
                 <div className="workforce-type-icon">
-                  <span className="material-symbols-outlined">
+
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                  >
                     engineering
                   </span>
+
                 </div>
 
                 <div>
+
                   <h3>
                     Skilled Manpower
                   </h3>
@@ -441,6 +509,7 @@ function IndustriesServed() {
                     carpenters, technicians and other trained
                     workers.
                   </p>
+
                 </div>
 
               </div>
@@ -449,12 +518,18 @@ function IndustriesServed() {
               <div className="workforce-type-card">
 
                 <div className="workforce-type-icon">
-                  <span className="material-symbols-outlined">
+
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                  >
                     groups
                   </span>
+
                 </div>
 
                 <div>
+
                   <h3>
                     Unskilled Manpower
                   </h3>
@@ -463,6 +538,7 @@ function IndustriesServed() {
                     Helpers, loaders, unloaders, packing
                     workers and general labour.
                   </p>
+
                 </div>
 
               </div>
@@ -471,12 +547,18 @@ function IndustriesServed() {
               <div className="workforce-type-card">
 
                 <div className="workforce-type-icon">
-                  <span className="material-symbols-outlined">
+
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                  >
                     supervisor_account
                   </span>
+
                 </div>
 
                 <div>
+
                   <h3>
                     Supervisors
                   </h3>
@@ -486,6 +568,7 @@ function IndustriesServed() {
                     workers and supporting day-to-day
                     operational requirements.
                   </p>
+
                 </div>
 
               </div>
@@ -495,6 +578,52 @@ function IndustriesServed() {
           </div>
 
         </div>
+
+      </section>
+
+
+      {/* =====================================================
+          LOCAL AREA
+      ===================================================== */}
+
+      <section className="industries-local-section">
+
+        <div className="industries-container">
+
+          <div className="industries-local-content">
+
+            <span className="section-label">
+              LOCAL MANPOWER SERVICES
+            </span>
+
+            <h2>
+              Manpower Contractor Serving Kundli &amp; Sonipat
+            </h2>
+
+            <p>
+              Based in Kundli, Sonipat, ShreeJi Enterprises
+              supports businesses, factories, warehouses,
+              construction sites and commercial establishments
+              looking for reliable manpower and labour contractor
+              services.
+            </p>
+
+            <div className="local-area-list">
+
+              <span>Kundli</span>
+              <span>Sonipat</span>
+              <span>Rai</span>
+              <span>Delhi NCR</span>
+              <span>Ghaziabad</span>
+              <span>Gurgaon</span>
+              <span>Noida</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </section>
 
 
@@ -503,6 +632,7 @@ function IndustriesServed() {
       ===================================================== */}
 
       <section className="industries-cta">
+
         <div className="industries-container">
 
           <div className="industries-cta-inner">
@@ -510,18 +640,17 @@ function IndustriesServed() {
             <div>
 
               <span className="section-label section-label-light">
-                NEED MANPOWER?
+                NEED MANPOWER IN KUNDLI?
               </span>
 
               <h2>
-                Tell Us What Workforce
-                You Need
+                Tell Us What Workforce You Need
               </h2>
 
               <p>
-                Share your manpower requirement with ShreeJi
-                Enterprises and our team can help you with
-                suitable workforce requirements.
+                Share your manpower requirement with
+                ShreeJi Enterprises for skilled, unskilled,
+                helper, supervisor or support workforce.
               </p>
 
             </div>
@@ -532,7 +661,10 @@ function IndustriesServed() {
             >
               Request Manpower
 
-              <span className="material-symbols-outlined">
+              <span
+                className="material-symbols-outlined"
+                aria-hidden="true"
+              >
                 arrow_forward
               </span>
             </Link>
@@ -540,6 +672,7 @@ function IndustriesServed() {
           </div>
 
         </div>
+
       </section>
 
     </main>
