@@ -60,7 +60,7 @@ function Footer() {
               email
             </span>
 
-            shivank152p@gmail.com
+            shivankp152@gmail.com
           </a>
 
         </div>
