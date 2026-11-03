@@ -98,7 +98,7 @@ function Navbar() {
 
         {/* DESKTOP CALL */}
         <a
-          href="tel:+917379433305"
+          href="tel:+918814999901"
           className="header-call"
         >
           <span className="material-symbols-outlined">
