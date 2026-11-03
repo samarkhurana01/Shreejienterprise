@@ -40,7 +40,7 @@ function Footer() {
               phone
             </span>
 
-            +91 8814999901
+            +91 88149 99901
           </a>
           <a
             href="tel:+918814999901"
