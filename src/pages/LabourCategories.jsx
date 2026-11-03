@@ -548,7 +548,7 @@ function LabourCategories() {
               </Link>
 
               <a
-                href="tel:+917379433305"
+                href="tel:+918814999901"
                 className="requirement-contact"
               >
                 <span
