@@ -33,7 +33,7 @@ function Footer() {
           </p>
 
           <a
-            href="tel:+917379433305"
+            href="tel:+918814999901"
             className="footer-phone"
           >
             <span className="material-symbols-outlined">
@@ -43,7 +43,7 @@ function Footer() {
             +91 73794 33305
           </a>
           <a
-            href="tel:+917379433305"
+            href="tel:+918814999901"
             className="footer-phone"
           >
             <span className="material-symbols-outlined">
