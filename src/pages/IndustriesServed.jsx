@@ -176,7 +176,7 @@ function IndustriesServed() {
               </Link>
 
               <a
-                href="tel:+917379433305"
+                href="tel:+918814999901"
                 className="industry-btn industry-btn-outline"
                 aria-label="Call ShreeJi Enterprises"
               >
