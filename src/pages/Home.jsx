@@ -221,7 +221,7 @@ function Home() {
               </Link>
 
               <a
-                href="tel:+917379433305"
+                href="tel:+918814999901"
                 className="button button-outline"
                 aria-label="Call ShreeJi Enterprises"
               >
@@ -839,7 +839,7 @@ function Home() {
       ===================================================== */}
 
       <a
-        href="https://wa.me/917379433305"
+        href="https://wa.me/918814999901"
         className="whatsapp"
         target="_blank"
         rel="noopener noreferrer"
