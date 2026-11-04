@@ -736,7 +736,7 @@ function About() {
               </Link>
 
               <a
-                href="mailto:shreejienterprises@gmail.com"
+                href="mailto:shivankp152@gmail.com"
                 className="button button-outline"
               >
                 <span
