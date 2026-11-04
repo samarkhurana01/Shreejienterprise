@@ -813,7 +813,7 @@ function Home() {
               </Link>
 
               <a
-                href="mailto:shivank152p@gmail.com"
+                href="mailto:shivankp152@gmail.com"
                 className="cta-email"
               >
                 <span
@@ -823,7 +823,7 @@ function Home() {
                   mail
                 </span>
 
-                shivank152p@gmail.com
+                shivankp152@gmail.com
               </a>
 
             </div>
