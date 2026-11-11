@@ -845,23 +845,7 @@ function Home() {
         rel="noopener noreferrer"
         aria-label="Contact ShreeJi Enterprises on WhatsApp"
       >
-        <iframe id="JotFormIFrame-01a1cae5953070008cef7a447a34c5bd0cb4"
-  title="ShreeJi Enterprises AI: Visitor Support Agent" allowtransparency="true"
-  allow="geolocation; microphone; camera; fullscreen"
-  src="https://agent.jotform.com/01a1cae5953070008cef7a447a34c5bd0cb4?embedMode=iframe&autofocus=0&background=1&shadow=1"
-  frameborder="0" style="
-    max-width:100%;
-    height:688px;
-    border:none;
-    
-    width:100%;
-  " scrolling="no">
-</iframe>
-<script src='https://cdn.jotfor.ms/s/umd/0dd51317b80/for-form-embed-handler.js'></script>
-<script>
-  window.jotformEmbedHandler("iframe[id='JotFormIFrame-01a1cae5953070008cef7a447a34c5bd0cb4']",
-    "https://www.jotform.com")
-</script>
+        
         <span
           className="material-symbols-outlined"
           aria-hidden="true"
