@@ -858,6 +858,7 @@ function Home() {
       <a
         href="https://wa.me/918814999901"
         className="whatsapp"
+        style={{ bottom: "90px" }}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contact ShreeJi Enterprises on WhatsApp"
