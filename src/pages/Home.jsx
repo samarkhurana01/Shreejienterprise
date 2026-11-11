@@ -1,9 +1,45 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
 import heroImage from "../assets/hero-construction.jpg";
 
 function Home() {
+  useEffect(() => {
+    const iframeSelector =
+      "iframe[id='JotFormIFrame-01a1cae5953070008cef7a447a34c5bd0cb4']";
+
+    const initializeJotform = () => {
+      if (typeof window.jotformEmbedHandler === "function") {
+        window.jotformEmbedHandler(
+          iframeSelector,
+          "https://www.jotform.com"
+        );
+      }
+    };
+
+    const existingScript = document.querySelector(
+      'script[data-shreeji-jotform-agent="true"]'
+    );
+
+    if (existingScript) {
+      initializeJotform();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src =
+      "https://cdn.jotfor.ms/s/umd/0dd51317b80/for-form-embed-handler.js";
+    script.async = true;
+    script.dataset.shreejiJotformAgent = "true";
+    script.onload = initializeJotform;
+    document.body.appendChild(script);
+
+    return () => {
+      script.onload = null;
+    };
+  }, []);
+
   const skilledWorkers = [
     {
       icon: "engineering",
@@ -830,6 +866,69 @@ function Home() {
 
           </div>
 
+        </div>
+      </section>
+
+
+      {/* =====================================================
+          AI VISITOR SUPPORT AGENT
+      ===================================================== */}
+
+      <section
+        className="section ai-support-section"
+        aria-labelledby="ai-support-heading"
+        style={{
+          background: "#f7f8fa",
+          padding: "64px 20px",
+        }}
+      >
+        <div
+          className="container"
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+          }}
+        >
+          <div
+            className="section-heading"
+            style={{ textAlign: "center", marginBottom: "28px" }}
+          >
+            <span className="eyebrow">AI VISITOR SUPPORT</span>
+            <h2 id="ai-support-heading">
+              How Can We Help You Today?
+            </h2>
+            <div className="orange-line center-line" />
+            <p>
+              Talk to our AI support agent for help with manpower,
+              workforce requirements and ShreeJi Enterprises services.
+            </p>
+          </div>
+
+          <div
+            style={{
+              width: "100%",
+              overflow: "hidden",
+              borderRadius: "16px",
+              background: "#ffffff",
+              boxShadow: "0 8px 30px rgba(0, 0, 0, 0.08)",
+            }}
+          >
+            <iframe
+              id="JotFormIFrame-01a1cae5953070008cef7a447a34c5bd0cb4"
+              title="ShreeJi Enterprises AI: Visitor Support Agent"
+              allow="geolocation; microphone; camera; fullscreen"
+              src="https://agent.jotform.com/01a1cae5953070008cef7a447a34c5bd0cb4?embedMode=iframe&autofocus=0&background=1&shadow=1"
+              frameBorder="0"
+              scrolling="no"
+              style={{
+                display: "block",
+                width: "100%",
+                maxWidth: "100%",
+                height: "688px",
+                border: "none",
+              }}
+            />
+          </div>
         </div>
       </section>
 
